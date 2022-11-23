@@ -1,65 +1,52 @@
+    
 name = input("Name des Autors -->")
 Liste_Geschichte = []
+Name_Held = input("Wähle den Namen deines Heldens \n-->")
 
-def Geschichte01():
-    print("Wähle den Helden deiner Geschichte ")
+def Geschichte(intro,opts, opt1, opt2, opt3, opt4):
+    print(intro)
     aktion = ""
     while aktion != "a" or aktion != "b" or aktion != "c" or aktion != "d":
-        print("a) Eine gute Fee \nb) Ein Oger \nc) Ein Magier \nd) Ein Zwerg")
+        print(opts)
         aktion = input("-->")
         if aktion == "a": 
-            Liste_Geschichte.append("Es war einmal eine gute Fee. Diese ")
+            Liste_Geschichte.append(opt1)
             return aktion
         elif aktion == "b":
-            Liste_Geschichte.append("Es war einmal ein Oger. Dieser ")
+            Liste_Geschichte.append(opt2)
             return aktion
         elif aktion == "c":
-            Liste_Geschichte.append("Es war einmal ein Magier. Dieser ")
+            Liste_Geschichte.append(opt3)
             return aktion
         elif aktion == "d":
-            Liste_Geschichte.append("Es war einmal ein kleiner Zwerg. Dieser ")
+            Liste_Geschichte.append(opt4)
             return aktion
         else:
             print("a, b, c oder d ?")
-def Geschichte02():
-    print("Welches Gefährt hat dein Held")
-    aktion2 = ""
-    while aktion2 != "a" or aktion2 != "b" or aktion2 != "c" or aktion2 != "d":
-        print("a) Ein Pferd \nb) Ein Riese \nc) Ein Dreirad \nd) Zu Fuß")
-        aktion2 = input("-->")
-        if aktion2 == "a": 
-            Liste_Geschichte.append("reitet voller Hochmut ein starkes Ross ")
-            return aktion2
-        elif aktion2 == "b":
-            Liste_Geschichte.append("sitzt auf dem Rücken eines stolzen Riesen ")
-            return aktion2
-        elif aktion2 == "c":
-            Liste_Geschichte.append("fährt voller Stolz ein Renn-Dreirad  ")
-            return aktion2
-        elif aktion2 == "d":
-            Liste_Geschichte.append("schreitet tapfer zu fuße voran ")
-            return aktion2
-        else:       
-            print("a, b, c oder d ?")
-            
-def Geschichte03():
-     print("")
 
-     
-x = Geschichte01()
-Geschichte02()
-Geschichte03()
+
+Geschichte_1 = Geschichte("Wähle den Helden deiner Geschichte ",
+           "a) Eine gute Fee \nb) Ein Oger \nc) Ein Magier \nd) Ein Zwerg",
+           f"Es war einmal eine gute Fee namens {Name_Held}. Diese ",
+           f"Es war einmal ein Oger namens {Name_Held}. Dieser ",
+           f"Es war einmal ein Magier namens {Name_Held}. Dieser ",
+           f"Es war einmal ein kleiner Zwerg namens {Name_Held}. Dieser ")
+
+Geschichte_2 = Geschichte("Welches Gefährt hat dein Held",
+           "a) Ein Pferd \nb) Ein Riese \nc) Ein Dreirad \nd) Zu Fuß",
+           "reitet voller Hochmut ein starkes Ross ",
+           "sitzt auf dem Rücken eines stolzen Riesen ",
+           "fährt voller Stolz ein Renn-Dreirad  ",
+           "schreitet tapfer zu fuße voran ")
+
+#Geschichte in eine txt Datei schreiben
 output = open(f"{name}'s Geschichte.txt", "w")
-text = (Liste_Geschichte)
-output.write(str(text))
+output.write(str(Liste_Geschichte))
 output.close()
 
+#Ausgabe in der Konsole:
 filename = f"{name}'s Geschichte.txt"
-
-with open(filename, "r") as file:
-    while "[" in file:
-        print("hallo")
-
 with open(filename, "r") as file: #r für read und utf-8 ist das Format zum auslesen (deswegen kommen manchmal bei äöü komische Zeichen)
     for line in file:               #, encoding="utf-8"
         print(line)
+
