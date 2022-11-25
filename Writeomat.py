@@ -24,16 +24,20 @@ def main():
 
     
     #Geschichte in eine txt Datei schreiben
-    output = open(f"{name}'s Geschichte.txt", "w", encoding="utf-8")
-    output.write(str(Liste_Geschichte))
-    output.close()
+  #  output = open(f"{name}'s Geschichte.txt", "w", encoding="utf-8")
+   # output.write(str(Liste_Geschichte))
+    #output.close()
     
+    output = open(f"{name}'s Geschichte.txt", "w", encoding="utf-8")
+    output.write(str("".join(Liste_Geschichte))) # "".join(Liste) ist eien Funktion um die Liste ohne Sonderzeichen zu speichern; in den "" steht wodurch die Elemente getrennt werden
+    output.close()
+  
     #Ausgabe in der Konsole:
     filename = f"{name}'s Geschichte.txt"
     with open(filename, "r", encoding="utf-8") as file:
         for line in file:
             print(line)
-    
+
 
 if __name__ == "__main__":
     main()
@@ -63,7 +67,7 @@ else:
                 
 """            
 Probleme: 
-   Huber fragen  - ist das Reloaded modules wirklich kein Problem? / ist es vermeidbar
+   Nachfragen:  - ist das Reloaded modules wirklich kein Problem? / ist es vermeidbar
                  
     - Name deines Heldens wird teilweise zu Beginn erfragt
     - nach Abbrechen wird direkt nach dem Helden der Geschichte gefragt (bei Fantasy)
