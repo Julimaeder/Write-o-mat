@@ -23,11 +23,7 @@ def main():
         Liste_Geschichte.append(Writeomat_SciFi.SciFi_Geschichte_1)
 
     
-    #Geschichte in eine txt Datei schreiben
-  #  output = open(f"{name}'s Geschichte.txt", "w", encoding="utf-8")
-   # output.write(str(Liste_Geschichte))
-    #output.close()
-    
+    #Geschichte in eine txt Datei schreiben    
     output = open(f"{name}'s Geschichte.txt", "w", encoding="utf-8")
     output.write(str("".join(Liste_Geschichte))) # "".join(Liste) ist eien Funktion um die Liste ohne Sonderzeichen zu speichern; in den "" steht wodurch die Elemente getrennt werden
     output.close()
