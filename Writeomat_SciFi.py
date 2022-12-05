@@ -1,6 +1,6 @@
-from Writeomat_test import Geschichte
-from Writeomat_test import Name_Held
-from Writeomat_test import Liste_Geschichte
+from Writeomat import Geschichte
+from Writeomat import Name_Held
+from Writeomat import Liste_Geschichte
 
 SciFi_Geschichte_1 = Geschichte("Info Text SciFi",
            "Optionen SciFi",
