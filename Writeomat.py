@@ -1,17 +1,47 @@
+# -*- coding: utf-8 -*-
+
 #import Writeomat_Horror
 #import Writeomat_Fantasy
 #import Writeomat_SciFi
 
+
+def Geschichte(intro,opts, opt1, opt2, opt3, opt4): 
+    print(intro)
+    aktion = ""
+    while aktion != "a" or aktion != "b" or aktion != "c" or aktion != "d":
+        print(opts)
+        aktion = input("-->")
+        if aktion == "a": 
+            return opt1
+        elif aktion == "b":
+            return opt2
+        elif aktion == "c":
+            return opt3
+        elif aktion == "d":
+            return opt4
+        else:
+            print("a, b, c oder d ?")
+            
 Liste_Geschichte = []
-def main():
+
+def main():  #Alles, was nicht beim Importieren dieser Datei ausgefÃ¼hrt werden soll
+    writeomattext = """
+__        __         _   _                                                        _   
+\ \      / /  _ __  (_) | |_    ___            ___            _ __ ___     __ _  | |_ 
+ \ \ /\ / /  | '__| | | | __|  / _ \  _____   / _ \   _____  | '_ ` _ \   / _` | | __|
+  \ V  V /   | |    | | | |_  |  __/ |_____| | (_) | |_____| | | | | | | | (_| | | |_ 
+   \_/\_/    |_|    |_|  \__|  \___|          \___/          |_| |_| |_|  \__,_|  \__|
+                                                                                      
+    """
+    print(writeomattext)
     name = input("Name des Autors -->")     # Wird in bei der Benennung der Textdatei benutzt 
     
-    #Die Geschichten werden im Maskulinum erzählt und später ggf. mit regex verändert 
-    Geschlecht = input("Wähle das Geschleicht deines Protagonisten/ deiner Protagonistin (m/w) \n-->").upper()
+    #Die Geschichten werden im Maskulinum erzÃ¤hlt und spÃ¤ter ggf. mit regex verÃ¤ndert 
+    Geschlecht = input("WÃ¤hle das Geschleicht deines Protagonisten/ deiner Protagonistin (m/w) \n-->").upper()
     while Geschlecht != "M" and Geschlecht != "W":     # Um andere Eingaben zu vermeiden
         Geschlecht = input("M/W?\n-->").upper()    
         
-    Genre = input("Wähle das Genre deiner Geschichte: \na) Horror \nb) Fantasy \nc) Science-Fiction \n-->")
+    Genre = input("WÃ¤hle das Genre deiner Geschichte: \na) Horror \nb) Fantasy \nc) Science-Fiction \n-->")
     while Genre != "a" and Genre != "b" and Genre != "c":     # Um andere Eingaben zu vermeiden
         Genre = input("a, b oder c?\n-->")
     
@@ -34,7 +64,7 @@ def main():
     output.write(str("".join(Liste_Geschichte))) # "".join(Liste) ist eien Funktion um die Liste ohne Sonderzeichen zu speichern; in den "" steht wodurch die Elemente getrennt werden
     output.close()
     if Geschlecht == "W":       #!!!
-        pass    #Regex zum Verändern des Geschlechts
+        pass    #Regex zum VerÃ¤ndern des Geschlechts
   
     #Ausgabe in der Konsole:
     filename = f"{name}'s Geschichte.txt"
@@ -45,39 +75,12 @@ def main():
 
 if __name__ == "__main__":
     main()
-else:
-   # if Geschlecht == "M":      #!!!
-    Name_Held = input("Wähle den Namen deines Protagonisten \n-->")
-    #else:
-     #   Name_Held = input("Wähle den Namen deiner Protagonistin \n-->")
- 
-    def Geschichte(intro,opts, opt1, opt2, opt3, opt4, Liste_Geschichte): 
-        print(intro)
-        aktion = ""
-        while aktion != "a" or aktion != "b" or aktion != "c" or aktion != "d":
-            print(opts)
-            aktion = input("-->")
-            if aktion == "a": 
-                return opt1
-            elif aktion == "b":
-                return opt2
-            elif aktion == "c":
-                return opt3
-            elif aktion == "d":
-                return opt4
-            else:
-                print("a, b, c oder d ?")
-                
+               
 """            
 Probleme: 
-   Nachfragen:  - ist das Reloaded modules wirklich kein Problem? / ist es vermeidbar
-                 
-    - Name deines Heldens wird teilweise zu Beginn erfragt
-  ? - nach Abbrechen wird direkt nach dem Helden der Geschichte gefragt (bei Fantasy)
-    - code unübersichtlich
+    - code unÃ¼bersichtlich
         - Kann man die Imports auch nach oben schreiben? -geht gerade nicht,
-          da die ausgeführt werden bevor Geschichte definiert ist
-        - else umgehen bei name = main
+          da die ausgefÃ¼hrt werden bevor Geschichte definiert ist
     - Name_Held je nach Geschlecht anpassen
      
 Notizen:

@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from Writeomat import Geschichte
 Name_Held = input("Wähle den Namen deines Protagonisten \n-->")
 
