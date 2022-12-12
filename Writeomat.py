@@ -3,6 +3,7 @@
 #import Writeomat_Horror
 #import Writeomat_Fantasy
 #import Writeomat_SciFi
+import pyfiglet
 
 
 def Geschichte(intro,opts, opt1, opt2, opt3, opt4): 
@@ -35,6 +36,7 @@ __        __         _   _                                                      
     """
     print(writeomattext)
     name = input("Name des Autors -->")     # Wird in bei der Benennung der Textdatei benutzt 
+    Titel = pyfiglet.figlet_format(input("Titel: \n-->"))
     
     #Die Geschichten werden im Maskulinum erzählt und später ggf. mit regex verändert 
     Geschlecht = input("Wähle das Geschleicht deines Protagonisten/ deiner Protagonistin (m/w) \n-->").upper()
@@ -47,15 +49,18 @@ __        __         _   _                                                      
     
     if Genre == "a":
         import Writeomat_Horror
+        Liste_Geschichte.append(Titel)
         Liste_Geschichte.append(Writeomat_Horror.Horror_Geschichte_1)
         Liste_Geschichte.append(Writeomat_Horror.Horror_Geschichte_2)
     elif Genre == "b":
         import Writeomat_Fantasy
+        Liste_Geschichte.append(Titel)
         Liste_Geschichte.append(Writeomat_Fantasy.Titelblatt(Writeomat_Fantasy.Fantasy_Geschichte_1))
         Liste_Geschichte.append(Writeomat_Fantasy.Fantasy_Geschichte_1)
         Liste_Geschichte.append(Writeomat_Fantasy.Fantasy_Geschichte_2)
     else:
         import Writeomat_SciFi
+        Liste_Geschichte.append(Titel)
         Liste_Geschichte.append(Writeomat_SciFi.SciFi_Geschichte_1)
 
 
@@ -87,4 +92,5 @@ Probleme:
 Notizen:
     Wichtige Sachen im Code mit #!!! markieren
     Reloaded modules:<module_name> ist nur eine Warnung von Spyder, ist nicht wichtig und kann in den Einstellungen ausgestellt werden
+    pip install pyfiglet
 """
