@@ -51,6 +51,7 @@ __        __         _   _                                                      
         Liste_Geschichte.append(Writeomat_Horror.Horror_Geschichte_2)
     elif Genre == "b":
         import Writeomat_Fantasy
+        Liste_Geschichte.append(Writeomat_Fantasy.Titelblatt(Writeomat_Fantasy.Fantasy_Geschichte_1))
         Liste_Geschichte.append(Writeomat_Fantasy.Fantasy_Geschichte_1)
         Liste_Geschichte.append(Writeomat_Fantasy.Fantasy_Geschichte_2)
     else:
