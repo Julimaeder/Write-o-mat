@@ -7,10 +7,6 @@ __        __         _   _                                                      
    \_/\_/    |_|    |_|  \__|  \___|          \___/          |_| |_| |_|  \__,_|  \__|
                                                                                       
 """
-    
-#import Writeomat_Horror
-#import Writeomat_Fantasy
-#import Writeomat_SciFi
 
 #Zum Öffnen der Text Datei 
 import os 
@@ -78,6 +74,8 @@ def main():  #Alles, was nicht beim Importieren dieser Datei ausgeführt werden 
     engine = pyttsx3.init()   
     schnelligkeit = input("Schnelligkeit: \n -->").upper()
     
+    #Die Geschichten werden im Maskulinum erzählt und später ggf. mit regex verändert 
+
     Geschlecht = input("Wähle das Geschleicht deines Protagonisten/ deiner Protagonistin (m/w) \n-->").upper()
     while Geschlecht != "M" and Geschlecht != "W":     # Um andere Eingaben zu vermeiden
         Geschlecht = input("M/W?\n-->").upper()
@@ -108,7 +106,7 @@ def main():  #Alles, was nicht beim Importieren dieser Datei ausgeführt werden 
     output = open(f"{name}'s Geschichte.txt", "w", encoding="utf-8")
     output.write(str("".join(Liste_Geschichte))) # "".join(Liste) ist eien Funktion um die Liste ohne Sonderzeichen zu speichern; in den "" steht wodurch die Elemente getrennt werden
     output.close()
-    if Geschlecht == "W":       #!!!
+    if Geschlecht == "W":       
         pass    #Regex zum Verändern des Geschlechts
   
     
@@ -118,7 +116,6 @@ def main():  #Alles, was nicht beim Importieren dieser Datei ausgeführt werden 
 #        for line in file:
 #            print(line)
 
-# Textdatei wird richtig geöffnet, nicht nur in der Konsole
 
     if sys.platform == "win32": # Windows
         os.startfile(f"{name}'s Geschichte.txt")
