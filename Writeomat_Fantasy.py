@@ -1,23 +1,34 @@
 # -*- coding: utf-8 -*-
 
-from Writeomat import Geschichte
-Name_Held = input("Wähle den Namen deines Protagonisten \n-->")
+from Writeomat import Geschichte_4, Geschichte_3, Geschichte_2
 
-Fantasy_Geschichte_1 = Geschichte("Wähle den Helden deiner Geschichte ",
+#if Geschlecht == "M":    
+#Name_Held = input("Wähle den Namen deines Protagonisten \n-->")
+#Name_Held = input("a")
+
+#if Geschlecht == "M":
+Name_Held = input("Wähle den Namen deines Protagonisten \n-->")
+#elif Geschlecht == "W":
+ #   Name_Held = input("Wähle den Namen deiner Protagonistin \n-->")
+#else:
+  #  print(Geschlecht)
+
+Fantasy_Geschichte_1 = Geschichte_4("\nWähle den Helden deiner Geschichte ",
            "a) Eine gute Fee \nb) Ein Oger \nc) Ein Magier \nd) Ein Zwerg",
            f"Es war einmal eine gute Fee namens {Name_Held}. Diese ",
            f"Es war einmal ein Oger namens {Name_Held}. Dieser ",
            f"Es war einmal ein Magier namens {Name_Held}. Dieser ",
            f"Es war einmal ein kleiner Zwerg namens {Name_Held}. Dieser ")
 
-Fantasy_Geschichte_2 = Geschichte("Welches Gefährt hat dein Held",
+Fantasy_Geschichte_2 = Geschichte_4("\nWelches Gefährt hat dein Held",
            "a) Ein Pferd \nb) Ein Riese \nc) Eine Kutsche \nd) Zu Fuß",
            "reitet voller Hochmut ein starkes Ross. ",
            "sitzt auf dem Rücken eines stolzen Riesen. ",
            "fährt in einer Kutsche dem Horizont entgegen. ",
            "schreitet tapfer zu fuße voran. ")
 
-Fantasy_Geschichte_3 = Geschichte("Wähle den Antagonisten deiner Geschichte",
+
+Fantasy_Geschichte_3 = Geschichte_4("\nWähle den Antagonisten deiner Geschichte",
            "a) Ein dunkler Magier \nb) Ein Drache \nc) Eine Truppe Orks \nd) kein Antagonist",
            "",
            "",
@@ -25,7 +36,7 @@ Fantasy_Geschichte_3 = Geschichte("Wähle den Antagonisten deiner Geschichte",
            "")    
             # Vorerst nicht appenden, soll am Anfang ausgewählt, und später genutzt werden
 if Fantasy_Geschichte_3 != "d":
-    Name_Gegner = input("Wähle den Namen deines Antagonisten \n-->")
+    Name_Gegner = input("\nWähle den Namen deines Antagonisten \n-->").capitalize()
 else: 
     Name_Gegner = ("")
     
