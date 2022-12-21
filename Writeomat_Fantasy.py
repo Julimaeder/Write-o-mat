@@ -7,7 +7,7 @@ from Writeomat import Geschichte_4, Geschichte_3, Geschichte_2
 #Name_Held = input("a")
 
 #if Geschlecht == "M":
-Name_Held = input("Wähle den Namen deines Protagonisten \n-->")
+Name_Held = input("Wähle den Namen deines Protagonisten \n-->").capitalize()
 #elif Geschlecht == "W":
  #   Name_Held = input("Wähle den Namen deiner Protagonistin \n-->")
 #else:

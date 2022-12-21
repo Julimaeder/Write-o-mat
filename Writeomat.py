@@ -87,6 +87,7 @@ def main():  #Alles, was nicht beim Importieren dieser Datei ausgeführt werden 
     if Genre == "a":
         import Writeomat_Horror
         Liste_Geschichte.append(Titel)
+        Liste_Geschichte.append(Writeomat_Horror.Titelblatt(Writeomat_Horror.Horror_Geschichte_1))
         Liste_Geschichte.append(Writeomat_Horror.Horror_Geschichte_1)
         Liste_Geschichte.append(Writeomat_Horror.Horror_Geschichte_2)
     elif Genre == "b":
@@ -98,7 +99,9 @@ def main():  #Alles, was nicht beim Importieren dieser Datei ausgeführt werden 
     else:
         import Writeomat_SciFi
         Liste_Geschichte.append(Titel)
+        Liste_Geschichte.append(Writeomat_SciFi.Titelblatt(Writeomat_SciFi.SciFi_Geschichte_1))
         Liste_Geschichte.append(Writeomat_SciFi.SciFi_Geschichte_1)
+        Liste_Geschichte.append(Writeomat_SciFi.SciFi_Geschichte_2)
 
 
 
