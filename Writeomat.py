@@ -1,9 +1,14 @@
-# -*- coding: utf-8 -*-
+# -- coding: utf-8 --
 
 #import Writeomat_Horror
-#import Writeomat_Fantasy
+ #import Writeomat_Fantasy
 #import Writeomat_SciFi
+#Für Titelschrift
 import pyfiglet
+#Für Text to speech
+from gtts import gTTS  
+import pyttsx3  
+from playsound import playsound 
 
 
 def Geschichte(intro,opts, opt1, opt2, opt3, opt4): 
@@ -34,9 +39,15 @@ __        __         _   _                                                      
    \_/\_/    |_|    |_|  \__|  \___|          \___/          |_| |_| |_|  \__,_|  \__|
                                                                                       
     """
-    print(writeomattext)
     name = input("Name des Autors -->")     # Wird in bei der Benennung der Textdatei benutzt 
     Titel = pyfiglet.figlet_format(input("Titel: \n-->"))
+    
+    #Für Text to speech
+    language = 'de'  
+    engine = pyttsx3.init()   
+    
+    schnelligkeit = input("Schnelligkeit: \n -->").upper() 
+    
     
     #Die Geschichten werden im Maskulinum erzählt und später ggf. mit regex verändert 
     Geschlecht = input("Wähle das Geschleicht deines Protagonisten/ deiner Protagonistin (m/w) \n-->").upper()
@@ -69,7 +80,7 @@ __        __         _   _                                                      
     output = open(f"{name}'s Geschichte.txt", "w", encoding="utf-8")
     output.write(str("".join(Liste_Geschichte))) # "".join(Liste) ist eien Funktion um die Liste ohne Sonderzeichen zu speichern; in den "" steht wodurch die Elemente getrennt werden
     output.close()
-    if Geschlecht == "W":       #!!!
+    if Geschlecht == "W":       
         pass    #Regex zum Verändern des Geschlechts
   
     #Ausgabe in der Konsole:
@@ -78,6 +89,28 @@ __        __         _   _                                                      
         for line in file:
             print(line)
 
+    
+    #text_val = 'Hallo Julian wie geht es dir?.'  
+    text = " ".join(Liste_Geschichte[2:]) 
+    if schnelligkeit == "L":
+        engine.setProperty("rate", 100)  
+        engine.say(text)  
+        engine.runAndWait()
+    elif schnelligkeit == "M":
+        engine.setProperty("rate", 200)  
+        engine.say(text)  
+        engine.runAndWait()
+    elif schnelligkeit == "S":
+        engine.setProperty("rate", 300)  
+        engine.say(text)  
+        engine.runAndWait()
+    else: 
+        print("L = Langsam, M= Mittel, S = Schnell")
+        
+        
+    obj = gTTS(text=text, lang=language, slow=False) 
+    
+        
 
 if __name__ == "__main__":
     main()
