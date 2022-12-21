@@ -32,7 +32,7 @@ else:
             
 Fantasy_Geschichte_Text_1 = ""
 
-def Titelblatt(Fantasy_Geschichte_1):
+def Titelblatt(Fanatsy_Geschichte_1):
     if "Fee" in Fantasy_Geschichte_1:
         return(
         """                                                                                                      
