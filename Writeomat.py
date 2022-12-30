@@ -16,48 +16,172 @@ import subprocess #zum öffnen der Datei im Editor für Mac und Linux
 #Für Text to speech: 
 import pyttsx3
 
-def Geschichte_4(intro,opts, opt1, opt2, opt3, opt4):   # Geschichte mit 4 Auswahlmöglichkeiten
-    print(intro)
+def clear():
+    if sys.platform == "win32" or sys.platform == "darwin": #Windows oder Mac
+        clear_command = 'cls'
+    else: # Linux
+        clear_command = 'clear'
+    os.system(clear_command)
+
+def Geschichte_4(intro,opt1, opt2, opt3, opt4, opt1_long, opt2_long, opt3_long, opt4_long):   # Geschichte mit 4 Auswahlmöglichkeiten
+#Fragen schoener ausgeben:
+#Damit die Fragen einheitlich bleiben wird eine maximale Laenge der Auswahlmoeglichkeiten festgelegt (16) und die Schrift zentriert anstatt, dass die Box erweitert wird.
+#Die rechte Border muss ein Zeichen kürzer sein, wenn der Text eine gerade Anzahl an Zeichen hat, daher die Trennung in l und r
+    clear()
+    print(pyfiglet.figlet_format("Write - o - mat"))
+    opt1_borderl = (24 - len(opt1))// 2 * " "
+    opt1_borderr = (24 - len(opt1))// 2 * " " if len(opt1) % 2 == 1 else ((24 - len(opt1))// 2 -1) * " "
+    opt2_borderl = (24 - len(opt2))// 2 * " "
+    opt2_borderr = (24 - len(opt2))// 2 * " " if len(opt2) % 2 == 1 else ((24 - len(opt2))// 2 -1) * " "
+    opt3_borderl = (24 - len(opt3))// 2 * " "
+    opt3_borderr = (24 - len(opt3))// 2 * " " if len(opt3) % 2 == 1 else ((24 - len(opt3))// 2 -1) * " "
+    opt4_borderl = (24 - len(opt4))// 2 * " "
+    opt4_borderr = (24 - len(opt4))// 2 * " " if len(opt4) % 2 == 1 else ((24 - len(opt4))// 2 -1) * " "
+    if len(intro) < 65:
+        introborder = (64 - len(intro))// 2 * " "   #String wird zentriert
+        introtext = f"{introborder}{intro}{introborder}"
+    elif len(intro) > 64 and len(intro) < 129:
+        space_position = intro[60:].find(" ")   #der nächste space character ab Zeichen 60 wird gesucht
+        introborder = (64 - len(intro[64:]))// 2 * " "
+        intro1 = intro[:60 + space_position]    #der Text bis zum ersten Space nach 60 Zeichen wird in die erste Zeile geschrieben
+        intro2 = intro[60 + space_position :]   #der restliche Text wird in die zweite Zeile geschrieben 
+        introtext = f"{intro1}\n{introborder}{intro2}{introborder}"
+    else:
+        space_position1 = intro[60:].find(" ")
+        space_position2 = intro[124:].find(" ")
+        introborder1 = (space_position1 // 2) * " "
+        introborder2 = (64 - len(intro[128:]))// 2 * " "
+        intro1 = intro[:60 + space_position1]
+        intro2 = intro[60 + space_position1 :124 + space_position2]
+        intro3 = intro[124 + space_position2 :]
+        introtext = f"{intro1}\n{introborder1}{intro2}{introborder1}\n{introborder2}{intro3}{introborder2}"
+    print(
+f"""
+{introtext}
+        
+ __________________________          __________________________
+(A|{opt1_borderl}{opt1}{opt1_borderr}|          |{opt2_borderl}{opt2}{opt2_borderr}|B)
+ ￣￣￣￣￣￣￣￣￣￣￣￣￣          ￣￣￣￣￣￣￣￣￣￣￣￣￣
+ __________________________          __________________________
+(C|{opt3_borderl}{opt3}{opt3_borderr}|          |{opt4_borderl}{opt4}{opt4_borderr}|D)
+ ￣￣￣￣￣￣￣￣￣￣￣￣￣          ￣￣￣￣￣￣￣￣￣￣￣￣￣
+"""
+    )
+
     aktion = ""
     while aktion != "a" and aktion != "b" and aktion != "c" and aktion != "d":
-        print(opts)
         aktion = input("-->")
         if aktion == "a": 
-            return opt1
+            return opt1_long
         elif aktion == "b":
-            return opt2
+            return opt2_long
         elif aktion == "c":
-            return opt3
+            return opt3_long
         elif aktion == "d":
-            return opt4
+            return opt4_long
         else:
             print("\nUngültige Eingabe. a, b, c oder d ?\n")
 
-def Geschichte_3(intro,opts, opt1, opt2, opt3): # Geschichte mit 3 Auswahlmöglichkeiten
-    print(intro)
+def Geschichte_3(intro,opt1, opt2, opt3, opt1_long, opt2_long, opt3_long):   # Geschichte mit 4 Auswahlmöglichkeiten
+#Fragen schoener ausgeben:
+#Damit die Fragen einheitlich bleiben wird eine maximale Laenge der Auswahlmoeglichkeiten festgelegt (16) und die Schrift zentriert anstatt, dass die Box erweitert wird.
+    clear()
+    print(pyfiglet.figlet_format("Write - o - mat"))
+    opt1_borderl = (24 - len(opt1))// 2 * " "
+    opt1_borderr = (24 - len(opt1))// 2 * " " if len(opt1) % 2 == 1 else ((24 - len(opt1))// 2 -1) * " "
+    opt2_borderl = (24 - len(opt2))// 2 * " "
+    opt2_borderr = (24 - len(opt2))// 2 * " " if len(opt2) % 2 == 1 else ((24 - len(opt2))// 2 -1) * " "
+    opt3_borderl = (24 - len(opt3))// 2 * " "
+    opt3_borderr = (24 - len(opt3))// 2 * " " if len(opt3) % 2 == 1 else ((24 - len(opt3))// 2 -1) * " "
+    if len(intro) < 24:
+        introborder = (64 - len(intro))// 2 * " "   #String wird zentriert
+        introtext = f"{introborder}{intro}{introborder}"
+    elif len(intro) > 64 and len(intro) < 129:
+        space_position = intro[60:].find(" ")   #der nächste space character ab Zeichen 60 wird gesucht
+        introborder = (64 - len(intro[64:]))// 2 * " "
+        intro1 = intro[:60 + space_position]    #der Text bis zum ersten Space nach 60 Zeichen wird in die erste Zeile geschrieben
+        intro2 = intro[60 + space_position :]   #der restliche Text wird in die zweite Zeile geschrieben 
+        introtext = f"{intro1}\n{introborder}{intro2}{introborder}"
+    else:
+        space_position1 = intro[60:].find(" ")
+        space_position2 = intro[124:].find(" ")
+        introborder1 = (space_position1 // 2) * " "
+        introborder2 = (64 - len(intro[128:]))// 2 * " "
+        intro1 = intro[:60 + space_position1]
+        intro2 = intro[60 + space_position1 :124 + space_position2]
+        intro3 = intro[124 + space_position2 :]
+        introtext = f"{intro1}\n{introborder1}{intro2}{introborder1}\n{introborder2}{intro3}{introborder2}"
+    print(
+f"""
+{introtext}
+        
+ __________________________          __________________________
+(A|{opt1_borderl}{opt1}{opt1_borderr}|          |{opt2_borderl}{opt2}{opt2_borderr}|B)
+ ￣￣￣￣￣￣￣￣￣￣￣￣￣          ￣￣￣￣￣￣￣￣￣￣￣￣￣
+                   __________________________
+                  (C|{opt3_borderl}{opt3}{opt3_borderr}|
+                   ￣￣￣￣￣￣￣￣￣￣￣￣￣ 
+"""
+    )
+
     aktion = ""
-    while aktion != "a" and aktion != "b" and aktion != "c":
-        print(opts)
+    while aktion != "a" and aktion != "b" and aktion != "c" and aktion != "d":
+       # print(opts)
         aktion = input("-->")
         if aktion == "a": 
-            return opt1
+            return opt1_long
         elif aktion == "b":
-            return opt2
+            return opt2_long
         elif aktion == "c":
-            return opt3
+            return opt3_long
         else:
             print("\nUngültige Eingabe. a, b oder c ?\n")
-            
-def Geschichte_2(intro,opts, opt1, opt2): # Geschichte mit 2 Auswahlmöglichkeiten
-    print(intro)
+
+def Geschichte_2(intro,opt1, opt2, opt1_long, opt2_long):   # Geschichte mit 4 Auswahlmöglichkeiten
+#Fragen schoener ausgeben:
+#Damit die Fragen einheitlich bleiben wird eine maximale Laenge der Auswahlmoeglichkeiten festgelegt (16) und die Schrift zentriert anstatt, dass die Box erweitert wird.
+    clear()
+    print(pyfiglet.figlet_format("Write - o - mat"))
+    opt1_borderl = (24 - len(opt1))// 2 * " "
+    opt1_borderr = (24 - len(opt1))// 2 * " " if len(opt1) % 2 == 1 else ((24 - len(opt1))// 2 -1) * " "
+    opt2_borderl = (24 - len(opt2))// 2 * " "
+    opt2_borderr = (24 - len(opt2))// 2 * " " if len(opt2) % 2 == 1 else ((24 - len(opt2))// 2 -1) * " "
+    if len(intro) < 65:
+        introborder = (64 - len(intro))// 2 * " "   #String wird zentriert
+        introtext = f"{introborder}{intro}{introborder}"
+    elif len(intro) > 64 and len(intro) < 129:
+        space_position = intro[60:].find(" ")   #der nächste space character ab Zeichen 60 wird gesucht
+        introborder = (64 - len(intro[64:]))// 2 * " "
+        intro1 = intro[:60 + space_position]    #der Text bis zum ersten Space nach 60 Zeichen wird in die erste Zeile geschrieben
+        intro2 = intro[60 + space_position :]   #der restliche Text wird in die zweite Zeile geschrieben 
+        introtext = f"{intro1}\n{introborder}{intro2}{introborder}"
+    else:
+        space_position1 = intro[60:].find(" ")
+        space_position2 = intro[124:].find(" ")
+        introborder1 = (space_position1 // 2) * " "
+        introborder2 = (64 - len(intro[128:]))// 2 * " "
+        intro1 = intro[:60 + space_position1]
+        intro2 = intro[60 + space_position1 :124 + space_position2]
+        intro3 = intro[124 + space_position2 :]
+        introtext = f"{intro1}\n{introborder1}{intro2}{introborder1}\n{introborder2}{intro3}{introborder2}"
+    print(
+f"""
+{introtext}
+        
+ __________________________          __________________________
+(A|{opt1_borderl}{opt1}{opt1_borderr}|          |{opt2_borderl}{opt2}{opt2_borderr}|B)
+ ￣￣￣￣￣￣￣￣￣￣￣￣￣          ￣￣￣￣￣￣￣￣￣￣￣￣￣
+"""
+    )
+
     aktion = ""
-    while aktion != "a" and aktion != "b":
-        print(opts)
+    while aktion != "a" and aktion != "b" and aktion != "c" and aktion != "d":
+       # print(opts)
         aktion = input("-->")
         if aktion == "a": 
-            return opt1
+            return opt1_long
         elif aktion == "b":
-            return opt2
+            return opt2_long
         else:
             print("\nUngültige Eingabe. a oder b ?\n")
 
@@ -72,7 +196,7 @@ def main():  #Alles, was nicht beim Importieren dieser Datei ausgeführt werden 
     
     #Für Text to speech  
     engine = pyttsx3.init()   
-    schnelligkeit = input("Schnelligkeit: \n -->").upper()
+    schnelligkeit = input("Schnelligkeit: \n-->").upper()
     
     #Die Geschichten werden im Maskulinum erzählt und später ggf. mit regex verändert 
 
