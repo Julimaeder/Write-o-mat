@@ -13,11 +13,11 @@ Name_Held = input("Wähle den Namen deines Protagonisten \n-->").capitalize()
   #  print(Geschlecht)
 
 Horror_Geschichte_1 = Geschichte_4("Wähle den Helden deiner Geschichte ",
-            "Ein Clown","Ein Zombie","Ein Werwolf","Ein Geist",
-            f"Eines Tages kam ein Clown  {Name_Held}. Dieser ",
-            f"Eines Tages kan ein Zombie {Name_Held}. Dieser ",
-            f"Eines Tages kam ein Werwolf {Name_Held}. Dieser ",
-            f"Eines Tages kam ein Geist {Name_Held}. Dieser ")
+            "Ein Vampir","Ein Mensch","Ein Magier","Ein edler Ritter",
+            f"Eines Tages kam ein Vampir  {Name_Held}. Dieser ",
+            f"Eines Tages kan ein Mensch {Name_Held}. Dieser ",
+            f"Eines Tages kam ein Magier {Name_Held}. Dieser ",
+            f"Eines Tages kam ein edler Ritter {Name_Held}. Dieser ")
 
 Horror_Geschichte_2 = Geschichte_4("An welchem Ort willst du starten",
            "Einem Friedhof", "Ein altes Haus im Wald", "Eine Kirmes", "Ein Schloss",
