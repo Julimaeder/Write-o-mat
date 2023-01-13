@@ -1,9 +1,5 @@
 # -*- coding: utf-8 -*-
-
-from Writeomat import Geschichte_4, Geschichte_3, Geschichte_2
-#if Geschlecht == "M":    
-#Name_Held = input("Wähle den Namen deines Protagonisten \n-->")
-#Name_Held = input("a")
+from Writeomat import Geschichte_2, Geschichte_3, Geschichte_4
 
 #if Geschlecht == "M":
 Name_Held = input("Wähle den Namen deines Protagonisten \n-->").capitalize()
@@ -26,14 +22,14 @@ Horror_Geschichte_2 = Geschichte_4("An welchem Ort willst du starten",
            "Wacht auf einer Kirmes auf. ",
            "Wacht in einem Schloss auf. ")
 
-
 Horror_Geschichte_3 = Geschichte_4("Wähle den Antagonisten deiner Geschichte",
           " Ein Clown"," Ein Zombie"," Ein Werwolf","Ein Geist",
            "",
            "",
            "",
            "")    
-            # Vorerst nicht appenden, soll am Anfang ausgewählt, und später genutzt werden
+
+# Vorerst nicht appenden, soll am Anfang ausgewählt, und später genutzt werden
 Horror_Geschichte_4 = Geschichte_3("Test für 3 Auswahlmöglichkeiten und zum testen kommt hier noch ein längerer Text rein.",
            "Nummero uno","Option 2","Drei",
            "Nummero uno",
@@ -45,7 +41,7 @@ Horror_Geschichte_5 = Geschichte_2("Test für zwei Auswahlmöglichkeiten Lorem i
            "Nummero uno",
            "Option 2")
 
-            # Vorerst nicht appenden, soll am Anfang ausgewählt, und später genutzt werden
+# Vorerst nicht appenden, soll am Anfang ausgewählt, und später genutzt werden
 if Horror_Geschichte_3 != "d":
     Name_Gegner = input("\nWähle den Namen deines Antagonisten \n-->").capitalize()
 else: 
@@ -82,6 +78,7 @@ def Titelblatt(Horror_Geschichte_1):
 ./               .%@@@@@&%%%%, .,,,,*,,,,. (%%%%&@@@@@(.              .(         
                              @@@ %%..,%% @@@         
                              
+
         """
                )
     elif "Mensch" in Horror_Geschichte_1:
@@ -132,6 +129,8 @@ def Titelblatt(Horror_Geschichte_1):
   *@/              @@                                       #@                  
                       &@@                                @@                     
                             @@&@@                 @@@@,   
+  
+  
         """
                )
     elif "Magier" in Horror_Geschichte_1:
@@ -170,11 +169,13 @@ def Titelblatt(Horror_Geschichte_1):
                           &&                          &&                        
                           &&&&&&&&&&&&&&&&&&&&&&&&&&&&&%                        
                                          
+
         """
                )
     elif "Ritter" in Horror_Geschichte_1:
         return(
         """
+
                                                 /&@/                            
                               @@@@@@@@@@@@@@@@@@@@@@@@@@@%                      
                                   @@@@@@@@@@@@@@@@@@@@@@@@@@                    
@@ -211,10 +212,10 @@ def Titelblatt(Horror_Geschichte_1):
                                @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@                  
                                                *@@@@@@@@@@@@@@@    
                                                
+
         """
                )
     else:
         return (f"FEHLER! Horror_Geschichte_1 = {Horror_Geschichte_1}")
-            
 
-                  
+   
