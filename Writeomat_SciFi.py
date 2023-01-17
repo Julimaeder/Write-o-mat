@@ -71,7 +71,7 @@ def Titelblatt(SciFi_Geschichte_1):
 
         """
                )
-    elif "Bösewicht" in SciFi_Geschichte_1:
+    elif "Bösewicht" in SciFi_Geschichte_2:
         return(
         """
 
