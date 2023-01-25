@@ -21,4 +21,4 @@ def Text_Nach_Geschlecht(self, text):
         self.Geschlecht_Text(text)
     return text
 
-#wird noch bearbeitet gegebenenfalls angepasst
+#wird noch bearbeitet und ausfegührt gegebenenfalls angepasst, optional mit PyDictionary
