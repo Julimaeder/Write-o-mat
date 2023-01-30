@@ -4,7 +4,7 @@ Es ist ein Programm zum Schreiben von Geschichten, indem Sie einfach zwischen ve
 
 
 ### Inhaltsverzeichnis
-Ihre Abschnittsüberschriften werden verwendet, um auf den Zielort zu verweisen.
+
 - [Vorraussetzungen](#Vorraussetzungen)
 - [Installation](#Installation)
 - [Anwendungsbeispiele](#Anwendungsbeispiele)
@@ -17,6 +17,9 @@ Ihre Abschnittsüberschriften werden verwendet, um auf den Zielort zu verweisen.
 - Ein internetfähiger Linux/Mac/Windows basierter Computer
 - Python & GitHub Kenntnisse (optional)
 - Kenntnisse im Umgang mit der Shell Konsole
+
+[
+zurück an den Anfang](#Write-o-mat)
 
 
 ### Installation
