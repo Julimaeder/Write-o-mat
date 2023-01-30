@@ -1,11 +1,52 @@
 # Write-o-mat
-Ein Programm zum Schreiben von Geschichten, indem Sie einfach zwischen verschiedenen Möglichkeiten wählen.
+Es ist ein Programm zum Schreiben von Geschichten, indem Sie einfach zwischen verschiedenen Möglichkeiten wählen.
 
-__        __    _ _                                                 _   
-\ \      / / __(_) |_ ___            ___            _ __ ___   __ _| |_ 
- \ \ /\ / / '__| | __/ _ \  _____   / _ \   _____  | '_ ` _ \ / _` | __|
-  \ V  V /| |  | | ||  __/ |_____| | (_) | |_____| | | | | | | (_| | |_ 
-   \_/\_/ |_|  |_|\__\___|          \___/          |_| |_| |_|\__,_|\__|
+
+
+### Inhaltsverzeichnis
+Ihre Abschnittsüberschriften werden verwendet, um auf den Zielort zu verweisen.
+- [Vorraussetzungen](#Vorraussetzungen)
+- [Installation](#Installation)
+- [Anwendungsbeispiele](#Anwendungsbeispiele)
+- [Versionsverlauf](#Versionsverlauf)
+- [Metadaten](#Metadaten)
+
+
+## Vorraussetzungen
+- Deutsch Kenntnisse, da das gesamte System auf Deutsch läuft
+- Ein internetfähiger Linux/Mac/Windows basierter Computer
+- Python & GitHub Kenntnisse (optional)
+- Kenntnisse im Umgang mit der Shell Konsole
+
+
+### Installation
+
+Mac:
+
+
+
+Windows:
+git clone https://github.com/Julimaeder/Write-o-mat.git
+
+
+
+Linux:
+
+
+
+#### Anwendungsbeispiele
+
+Man 
+
+
+
+
+
+
+
+                                                                        
+
+                                                                        
                                                                         
    
    
