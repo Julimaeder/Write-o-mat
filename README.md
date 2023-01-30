@@ -19,8 +19,8 @@ Jenachdem wie Sie sich entscheiden nimmt die Geschichte verschiedene Wendungen u
 - Python & GitHub Kenntnisse (optional)
 - Kenntnisse im Umgang mit der Shell Konsole
 
-[
-  zurück an den Anfang](#Write-o-mat)
+
+  [zurück an den Anfang](#Write-o-mat)
 
 
 ### Installation
