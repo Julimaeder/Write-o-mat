@@ -1,10 +1,14 @@
 # -*- coding: utf-8 -*-
 
 from Writeomat import Geschichte_4, Geschichte_3, Geschichte_2
-
+import random
 #if Geschlecht == "M":    
 #Name_Held = input("Wähle den Namen deines Protagonisten \n-->")
 #Name_Held = input("a")
+
+liste_Geschichte_2 = ["Dreirad", "schwebenden Besen", "schnell hüpfenden Frosch", "Papierflieger", "Panzer"]
+liste_Geschichte_3 = ["Werwolf", "Riese", "Vampir", "Lavahund", "Babydragon"]
+
 
 #if Geschlecht == "M":
 Name_Held = input("Wähle den Namen deines Protagonisten \n-->").capitalize()
@@ -25,15 +29,16 @@ Fantasy_Geschichte_2 = Geschichte_4("Welches Gefährt hat dein Held",
            "reitet voller Hochmut ein starkes Ross. ",
            "sitzt auf dem Rücken eines stolzen Riesen. ",
            "fährt in einer Kutsche dem Horizont entgegen. ",
-           "schreitet tapfer zu fuße voran. ")
-
+           "schreitet tapfer zu fuße voran. ",
+           f"bewegt sich auf einem {random.choice(liste_Geschichte_2)} fort. ")
 
 Fantasy_Geschichte_3 = Geschichte_4("Wähle den Antagonisten deiner Geschichte",
            "Ein dunkler Magier","Ein Drache","Eine Truppe Orks","kein Antagonist",
-           "",
-           "",
-           "",
-           "")  
+           "text dunkler Magier",
+           "Text Drache",
+           "Text Ork",
+           "Antagonist Text",
+           f"Text {random.choice(liste_Geschichte_3)}. Dieser")  
 
 Fantasy_Geschichte_4 = Geschichte_3("Test für 3 Auswahlmöglichkeiten und zum testen kommt hier noch ein längerer Text rein.",
            "Nummero uno","Option 2","Drei",

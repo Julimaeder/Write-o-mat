@@ -14,13 +14,12 @@ import sys #zum Prüfen, welches os man nutzt; anders als "name" aus "os" unters
 import subprocess #zum öffnen der Datei im Editor für Mac und Linux
 #Für Text to speech: 
 import pyttsx3
-from gtts import gTTS
 
 
 
 def sprachausgabe():
     engine = pyttsx3.init()   
-    schnelligkeit = input("Schnelligkeit: \n-->").upper()
+    schnelligkeit = input("Schnelligkeit (S = Schnell, M = Mittel, L = Langsam): \n-->").upper()
     text = " ".join(Liste_Geschichte[2:]) 
     if schnelligkeit == "L":
         engine.setProperty("rate", 150)  
@@ -44,7 +43,7 @@ def clear():
         clear_command = 'clear'
     os.system(clear_command)
 
-def Geschichte_4(intro,opt1, opt2, opt3, opt4, opt1_long, opt2_long, opt3_long, opt4_long):   # Geschichte mit 4 Auswahlmöglichkeiten
+def Geschichte_4(intro,opt1, opt2, opt3, opt4, opt1_long, opt2_long, opt3_long, opt4_long, e_choice = ""):   # Geschichte mit 4 Auswahlmöglichkeiten
 #Fragen schoener ausgeben:
 #Damit die Fragen einheitlich bleiben wird eine maximale Laenge der Auswahlmoeglichkeiten festgelegt (16) und die Schrift zentriert anstatt, dass die Box erweitert wird.
 #Die rechte Border muss ein Zeichen kürzer sein, wenn der Text eine gerade Anzahl an Zeichen hat, daher die Trennung in l und r
@@ -76,6 +75,13 @@ def Geschichte_4(intro,opt1, opt2, opt3, opt4, opt1_long, opt2_long, opt3_long, 
         intro2 = intro[60 + space_position1 :124 + space_position2]
         intro3 = intro[124 + space_position2 :]
         introtext = f"{intro1}\n{introborder1}{intro2}{introborder1}\n{introborder2}{intro3}{introborder2}"
+    if e_choice != "":
+        estring = """                   __________________________
+                  (E|        Zufällig        |
+                   ￣￣￣￣￣￣￣￣￣￣￣￣￣ 
+        """
+    else:
+        estring = ""
     print(
 f"""
 {introtext}
@@ -86,11 +92,12 @@ f"""
  __________________________          __________________________
 (C|{opt3_borderl}{opt3}{opt3_borderr}|          |{opt4_borderl}{opt4}{opt4_borderr}|D)
  ￣￣￣￣￣￣￣￣￣￣￣￣￣          ￣￣￣￣￣￣￣￣￣￣￣￣￣
+{estring}
 """
     )
 
     aktion = ""
-    while aktion != "a" and aktion != "b" and aktion != "c" and aktion != "d":
+    while aktion != "a" and aktion != "b" and aktion != "c" and aktion != "d" and aktion != "e":
         aktion = input("-->")
         if aktion == "a": 
             return opt1_long
@@ -100,10 +107,12 @@ f"""
             return opt3_long
         elif aktion == "d":
             return opt4_long
+        elif aktion == "e":
+            return e_choice
         else:
             print("\nUngültige Eingabe. a, b, c oder d ?\n")
 
-def Geschichte_3(intro,opt1, opt2, opt3, opt1_long, opt2_long, opt3_long):   # Geschichte mit 4 Auswahlmöglichkeiten
+def Geschichte_3(intro,opt1, opt2, opt3, opt1_long, opt2_long, opt3_long, e_choice = ""):   # Geschichte mit 4 Auswahlmöglichkeiten
 #Fragen schoener ausgeben:
 #Damit die Fragen einheitlich bleiben wird eine maximale Laenge der Auswahlmoeglichkeiten festgelegt (16) und die Schrift zentriert anstatt, dass die Box erweitert wird.
     clear()
@@ -132,6 +141,13 @@ def Geschichte_3(intro,opt1, opt2, opt3, opt1_long, opt2_long, opt3_long):   # G
         intro2 = intro[60 + space_position1 :124 + space_position2]
         intro3 = intro[124 + space_position2 :]
         introtext = f"{intro1}\n{introborder1}{intro2}{introborder1}\n{introborder2}{intro3}{introborder2}"
+    if e_choice != "":
+        estring = """                   __________________________
+                  (D|        Zufällig        |
+                   ￣￣￣￣￣￣￣￣￣￣￣￣￣ 
+        """
+    else:
+        estring = ""
     print(
 f"""
 {introtext}
@@ -142,6 +158,7 @@ f"""
                    __________________________
                   (C|{opt3_borderl}{opt3}{opt3_borderr}|
                    ￣￣￣￣￣￣￣￣￣￣￣￣￣ 
+{estring}
 """
     )
 
@@ -155,10 +172,12 @@ f"""
             return opt2_long
         elif aktion == "c":
             return opt3_long
+        elif aktion == "d":
+            return e_choice
         else:
             print("\nUngültige Eingabe. a, b oder c ?\n")
 
-def Geschichte_2(intro,opt1, opt2, opt1_long, opt2_long):   # Geschichte mit 4 Auswahlmöglichkeiten
+def Geschichte_2(intro,opt1, opt2, opt1_long, opt2_long, e_choice = ""):   # Geschichte mit 4 Auswahlmöglichkeiten
 #Fragen schoener ausgeben:
 #Damit die Fragen einheitlich bleiben wird eine maximale Laenge der Auswahlmoeglichkeiten festgelegt (16) und die Schrift zentriert anstatt, dass die Box erweitert wird.
     clear()
@@ -185,6 +204,13 @@ def Geschichte_2(intro,opt1, opt2, opt1_long, opt2_long):   # Geschichte mit 4 A
         intro2 = intro[60 + space_position1 :124 + space_position2]
         intro3 = intro[124 + space_position2 :]
         introtext = f"{intro1}\n{introborder1}{intro2}{introborder1}\n{introborder2}{intro3}{introborder2}"
+    if e_choice != "":
+        estring = """                   __________________________
+                  (C|        Zufällig        |
+                   ￣￣￣￣￣￣￣￣￣￣￣￣￣ 
+        """
+    else:
+        estring = ""
     print(
 f"""
 {introtext}
@@ -192,6 +218,7 @@ f"""
  __________________________          __________________________
 (A|{opt1_borderl}{opt1}{opt1_borderr}|          |{opt2_borderl}{opt2}{opt2_borderr}|B)
  ￣￣￣￣￣￣￣￣￣￣￣￣￣          ￣￣￣￣￣￣￣￣￣￣￣￣￣
+{estring}
 """
     )
 
@@ -203,6 +230,8 @@ f"""
             return opt1_long
         elif aktion == "b":
             return opt2_long
+        elif aktion == "c":
+            return e_choice
         else:
             print("\nUngültige Eingabe. a, b, c oder d ?\n")
 
@@ -235,6 +264,8 @@ def main():  #Alles, was nicht beim Importieren dieser Datei ausgeführt werden 
         Liste_Geschichte.append(Writeomat_Fantasy.Titelblatt(Writeomat_Fantasy.Fantasy_Geschichte_1))
         Liste_Geschichte.append(Writeomat_Fantasy.Fantasy_Geschichte_1)
         Liste_Geschichte.append(Writeomat_Fantasy.Fantasy_Geschichte_2)
+        Liste_Geschichte.append(Writeomat_Fantasy.Fantasy_Geschichte_3)
+        Liste_Geschichte.append(Writeomat_Fantasy.Fantasy_Geschichte_4)
     else:
         import Writeomat_SciFi
         Liste_Geschichte.append(Titel)
@@ -257,7 +288,7 @@ def main():  #Alles, was nicht beim Importieren dieser Datei ausgeführt werden 
 #        for line in file:
 #            print(line)
 
-    response = input("Möchten Sie die Geschichte vorgelesen haben wollen?(j/n)").upper()
+    response = input("Möchten Sie die Geschichte vorgelesen haben wollen? (J/N)\n-->").upper()
     while response != "J" and response != "N":  #um falsche eingaben zu vermeiden
      response = input("J/N?\n-->").upper()
     if response == "J":
@@ -274,22 +305,6 @@ def main():  #Alles, was nicht beim Importieren dieser Datei ausgeführt werden 
     else: # Linux
         subprocess.call(["xdg-open", f"{name}'s Geschichte.txt"])
      
-    #Sprachausgabe:
-    text = " ".join(Liste_Geschichte[2:]) 
-    if schnelligkeit == "L":
-        engine.setProperty("rate", 150)  
-        engine.say(text)  
-        engine.runAndWait()
-    elif schnelligkeit == "M":
-        engine.setProperty("rate", 200)  
-        engine.say(text)  
-        engine.runAndWait()
-    elif schnelligkeit == "S":
-        engine.setProperty("rate", 250)  
-        engine.say(text)  
-        engine.runAndWait()
-    else: 
-        print("L = Langsam, M= Mittel, S = Schnell")
        
 if __name__ == "__main__":
     main()
@@ -303,4 +318,5 @@ Probleme:
 Notizen:
     Wichtige Sachen im Code mit #!!! markieren
     Reloaded modules:<module_name> ist nur eine Warnung von Spyder, ist nicht wichtig und kann in den Einstellungen ausgestellt werden
+    Im ersten Geschichtsteil bitte kein Random
 """
