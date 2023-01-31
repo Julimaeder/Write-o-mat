@@ -8,7 +8,7 @@ def Geschlecht_Angepasst(text, Geschlecht):
         text = re.sub(r'\b(er)\b', 'sie', text)
         text = re.sub(r'\b(Ein)\b', 'Eine', text)
     else:
-        raise ValueError("Invalid gender option. Please choose 'M' for male or 'W' for female.")
+        raise ValueError("Falsches Geschlecht.")
         
     # Pronomen wchsel
     text_komplett= text.split()
