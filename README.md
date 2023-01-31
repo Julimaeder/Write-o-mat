@@ -8,6 +8,7 @@ Jenachdem wie Sie sich entscheiden nimmt die Geschichte verschiedene Wendungen u
 
 - [Vorraussetzungen](#Vorraussetzungen)
 - [Installation](#Installation)
+- [Anwendung](#Anwendung)
 - [Anwendungsbeispiele](#Anwendungsbeispiele)
 - [Versionsverlauf](#Versionsverlauf)
 - [Metadaten](#Metadaten)
@@ -40,6 +41,16 @@ git clone https://github.com/Julimaeder/Write-o-mat.git
 
 
 [zurück an den Anfang](#Write-o-mat)
+
+
+### Anwendung 
+
+Unter allen OS: Writeomat.py im Terminal ausführen
+
+Optional unter Windows: Writeomat_open.py in einer beliebigen Python IDE ausführen
+
+  [zurück an den Anfang](#Write-o-mat)
+  
 
 #### Anwendungsbeispiele
 
