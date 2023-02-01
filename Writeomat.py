@@ -78,7 +78,7 @@ def Geschichte_4(intro,opt1, opt2, opt3, opt4, opt1_long, opt2_long, opt3_long, 
         introtext = f"{intro1}\n{introborder1}{intro2}{introborder1}\n{introborder2}{intro3}{introborder2}"
     if e_choice != "":
         estring = """                   __________________________
-                  (E|        Zufällig        |
+                  (E|        Zufällig       |
                    ￣￣￣￣￣￣￣￣￣￣￣￣￣ 
         """
     else:
@@ -99,33 +99,33 @@ f"""
 
     aktion = ""
     if estring == "":
-        while aktion != "a" and aktion != "b" and aktion != "c" and aktion != "d":
-            aktion = input("-->")
-            if aktion == "a": 
+        while aktion != "A" and aktion != "B" and aktion != "C" and aktion != "D":
+            aktion = input("-->").upper()
+            if aktion == "A": 
                 return opt1_long
-            elif aktion == "b":
+            elif aktion == "B":
                 return opt2_long
-            elif aktion == "c":
+            elif aktion == "C":
                 return opt3_long
-            elif aktion == "d":
+            elif aktion == "D":
                 return opt4_long
             else:
-                print("\nUngültige Eingabe. a, b, c oder d ?\n")
+                print("\nUngültige Eingabe. A, B, C oder D ?\n")
     else:
-        while aktion != "a" and aktion != "b" and aktion != "c" and aktion != "d" and aktion != "e":
-            aktion = input("-->")
-            if aktion == "a": 
+        while aktion != "A" and aktion != "B" and aktion != "C" and aktion != "D" and aktion != "E":
+            aktion = input("-->").upper()
+            if aktion == "A": 
                 return opt1_long
-            elif aktion == "b":
+            elif aktion == "B":
                 return opt2_long
-            elif aktion == "c":
+            elif aktion == "C":
                 return opt3_long
-            elif aktion == "d":
+            elif aktion == "D":
                 return opt4_long
-            elif aktion == "e":
+            elif aktion == "E":
                 return e_choice
             else:
-                print("\nUngültige Eingabe. a, b, c, d oder e ?\n")
+                print("\nUngültige Eingabe. A, B, C, D oder E ?\n")
 
 def Geschichte_3(intro,opt1, opt2, opt3, opt1_long, opt2_long, opt3_long, e_choice = ""):   # Geschichte mit 4 Auswahlmöglichkeiten
 #Fragen schoener ausgeben:
@@ -158,7 +158,7 @@ def Geschichte_3(intro,opt1, opt2, opt3, opt1_long, opt2_long, opt3_long, e_choi
         introtext = f"{intro1}\n{introborder1}{intro2}{introborder1}\n{introborder2}{intro3}{introborder2}"
     if e_choice != "":
         estring = """                   __________________________
-                  (D|        Zufällig        |
+                  (D|        Zufällig       |
                    ￣￣￣￣￣￣￣￣￣￣￣￣￣ 
         """
     else:
@@ -179,29 +179,29 @@ f"""
 
     aktion = ""
     if estring == "":
-        while aktion != "a" and aktion != "b" and aktion != "c":
-            aktion = input("-->")
-            if aktion == "a": 
+        while aktion != "A" and aktion != "B" and aktion != "C":
+            aktion = input("-->").upper()
+            if aktion == "A": 
                 return opt1_long
-            elif aktion == "b":
+            elif aktion == "B":
                 return opt2_long
-            elif aktion == "c":
+            elif aktion == "C":
                 return opt3_long
             else:
-                print("\nUngültige Eingabe. a, b oder c ?\n")
+                print("\nUngültige Eingabe. A, B oder C ?\n")
     else:
-        while aktion != "a" and aktion != "b" and aktion != "c" and aktion != "d":
-            aktion = input("-->")
-            if aktion == "a": 
+        while aktion != "A" and aktion != "B" and aktion != "C" and aktion != "D":
+            aktion = input("-->").upper()
+            if aktion == "A": 
                 return opt1_long
-            elif aktion == "b":
+            elif aktion == "B":
                 return opt2_long
-            elif aktion == "c":
+            elif aktion == "C":
                 return opt3_long
-            elif aktion == "d":
+            elif aktion == "D":
                 return e_choice
             else:
-                print("\nUngültige Eingabe. a, b, c oder d ?\n")
+                print("\nUngültige Eingabe. A, B, C oder D ?\n")
 
 def Geschichte_2(intro,opt1, opt2, opt1_long, opt2_long, e_choice = ""):   # Geschichte mit 4 Auswahlmöglichkeiten
 #Fragen schoener ausgeben:
@@ -232,7 +232,7 @@ def Geschichte_2(intro,opt1, opt2, opt1_long, opt2_long, e_choice = ""):   # Ges
         introtext = f"{intro1}\n{introborder1}{intro2}{introborder1}\n{introborder2}{intro3}{introborder2}"
     if e_choice != "":
         estring = """                   __________________________
-                  (C|        Zufällig        |
+                  (C|        Zufällig       |
                    ￣￣￣￣￣￣￣￣￣￣￣￣￣ 
         """
     else:
@@ -250,25 +250,25 @@ f"""
 
     aktion = ""
     if estring == "":
-        while aktion != "a" and aktion != "b":
-            aktion = input("-->")
-            if aktion == "a": 
+        while aktion != "A" and aktion != "B":
+            aktion = input("-->").upper()
+            if aktion == "A": 
                 return opt1_long
-            elif aktion == "b":
+            elif aktion == "B":
                 return opt2_long
             else:
-                print("\nUngültige Eingabe. a oder b ?\n")
+                print("\nUngültige Eingabe. A oder B ?\n")
     else:
-        while aktion != "a" and aktion != "b" and aktion != "c":
-            aktion = input("-->")
-            if aktion == "a": 
+        while aktion != "A" and aktion != "B" and aktion != "C":
+            aktion = input("-->").upper()
+            if aktion == "A": 
                 return opt1_long
-            elif aktion == "b":
+            elif aktion == "B":
                 return opt2_long
-            elif aktion == "c":
+            elif aktion == "C":
                 return e_choice
             else:
-                print("\nUngültige Eingabe. a, b oder c ?\n")
+                print("\nUngültige Eingabe. A, B oder C ?\n")
                 
                 
 def Anfangstext_print(Anfangstext, print_speed=0.04):
@@ -276,7 +276,6 @@ def Anfangstext_print(Anfangstext, print_speed=0.04):
 		sys.stdout.write(i)
 		sys.stdout.flush()
 		time.sleep(print_speed)
-
         
 Liste_Geschichte = []
 
@@ -307,17 +306,17 @@ def main():  #Alles, was nicht beim Importieren dieser Datei ausgeführt werden 
     while Geschlecht != "M" and Geschlecht != "W":     # Um andere Eingaben zu vermeiden
         Geschlecht = input("M/W?\n-->").upper()
     
-    Genre = input("\nWähle das Genre deiner Geschichte: \na) Horror \nb) Fantasy \nc) Science-Fiction \n-->")
-    while Genre != "a" and Genre != "b" and Genre != "c":     # Um andere Eingaben zu vermeiden
-        Genre = input("a, b oder c?\n-->")
+    Genre = input("\nWähle das Genre deiner Geschichte: \nA) Horror \nB) Fantasy \nC) Science-Fiction \n-->").upper()
+    while Genre != "A" and Genre != "B" and Genre != "C":     # Um andere Eingaben zu vermeiden
+        Genre = input("A, B oder C?\n-->").upper()
     
-    if Genre == "a":
+    if Genre == "A":
         import Writeomat_Horror
         Liste_Geschichte.append(Titel)
         Liste_Geschichte.append(Writeomat_Horror.Titelblatt(Writeomat_Horror.Horror_Geschichte_1))
         Liste_Geschichte.append(Writeomat_Horror.Horror_Geschichte_1)
         Liste_Geschichte.append(Writeomat_Horror.Horror_Geschichte_2)
-    elif Genre == "b":
+    elif Genre == "B":
         import Writeomat_Fantasy
         Liste_Geschichte.append(Titel)
         Liste_Geschichte.append(Writeomat_Fantasy.Titelblatt(Writeomat_Fantasy.Fantasy_Geschichte_1))
@@ -325,6 +324,9 @@ def main():  #Alles, was nicht beim Importieren dieser Datei ausgeführt werden 
         Liste_Geschichte.append(Writeomat_Fantasy.Fantasy_Geschichte_2)
         Liste_Geschichte.append(Writeomat_Fantasy.Fantasy_Geschichte_3)
         Liste_Geschichte.append(Writeomat_Fantasy.Fantasy_Geschichte_4)
+        Liste_Geschichte.append(Writeomat_Fantasy.Fantasy_Geschichte_5)
+        Liste_Geschichte.append(Writeomat_Fantasy.Fantasy_Geschichte_6)
+        Liste_Geschichte.append(Writeomat_Fantasy.Fantasy_Geschichte_7)
     else:
         import Writeomat_SciFi
         Liste_Geschichte.append(Titel)
@@ -369,12 +371,7 @@ def main():  #Alles, was nicht beim Importieren dieser Datei ausgeführt werden 
 if __name__ == "__main__":
     main()
 
-   
-
-"""                
-Probleme: 
-    - Name_Held je nach Geschlecht anpassen
-     
+"""
 Notizen:
     Wichtige Sachen im Code mit #!!! markieren
     Reloaded modules:<module_name> ist nur eine Warnung von Spyder, ist nicht wichtig und kann in den Einstellungen ausgestellt werden
