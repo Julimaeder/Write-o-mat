@@ -14,22 +14,23 @@ import sys #zum Prüfen, welches os man nutzt; anders als "name" aus "os" unters
 import subprocess #zum öffnen der Datei im Editor für Mac und Linux
 #Für Text to speech: 
 import pyttsx3
+import time #Für den Anfangstext
 
 
 
 def sprachausgabe():
     engine = pyttsx3.init()   
-    schnelligkeit = input("Schnelligkeit (S = Schnell, M = Mittel, L = Langsam): \n-->").upper()
+    geschwindigkeit = input("Wählen Sie die Geschwindigkeit der Stimme (S = Schnell, M = Mittel, L = Langsam): \n-->").upper()
     text = " ".join(Liste_Geschichte[2:]) 
-    if schnelligkeit == "L":
+    if geschwindigkeit == "L":
         engine.setProperty("rate", 150)  
         engine.say(text)  
         engine.runAndWait()
-    elif schnelligkeit == "M":
+    elif geschwindigkeit == "M":
         engine.setProperty("rate", 200)  
         engine.say(text)  
         engine.runAndWait()
-    elif schnelligkeit == "S":
+    elif geschwindigkeit == "S":
         engine.setProperty("rate", 250)  
         engine.say(text)  
         engine.runAndWait()
@@ -97,20 +98,34 @@ f"""
     )
 
     aktion = ""
-    while aktion != "a" and aktion != "b" and aktion != "c" and aktion != "d" and aktion != "e":
-        aktion = input("-->")
-        if aktion == "a": 
-            return opt1_long
-        elif aktion == "b":
-            return opt2_long
-        elif aktion == "c":
-            return opt3_long
-        elif aktion == "d":
-            return opt4_long
-        elif aktion == "e":
-            return e_choice
-        else:
-            print("\nUngültige Eingabe. a, b, c oder d ?\n")
+    if estring == "":
+        while aktion != "a" and aktion != "b" and aktion != "c" and aktion != "d":
+            aktion = input("-->")
+            if aktion == "a": 
+                return opt1_long
+            elif aktion == "b":
+                return opt2_long
+            elif aktion == "c":
+                return opt3_long
+            elif aktion == "d":
+                return opt4_long
+            else:
+                print("\nUngültige Eingabe. a, b, c oder d ?\n")
+    else:
+        while aktion != "a" and aktion != "b" and aktion != "c" and aktion != "d" and aktion != "e":
+            aktion = input("-->")
+            if aktion == "a": 
+                return opt1_long
+            elif aktion == "b":
+                return opt2_long
+            elif aktion == "c":
+                return opt3_long
+            elif aktion == "d":
+                return opt4_long
+            elif aktion == "e":
+                return e_choice
+            else:
+                print("\nUngültige Eingabe. a, b, c, d oder e ?\n")
 
 def Geschichte_3(intro,opt1, opt2, opt3, opt1_long, opt2_long, opt3_long, e_choice = ""):   # Geschichte mit 4 Auswahlmöglichkeiten
 #Fragen schoener ausgeben:
@@ -163,19 +178,30 @@ f"""
     )
 
     aktion = ""
-    while aktion != "a" and aktion != "b" and aktion != "c" and aktion != "d":
-       # print(opts)
-        aktion = input("-->")
-        if aktion == "a": 
-            return opt1_long
-        elif aktion == "b":
-            return opt2_long
-        elif aktion == "c":
-            return opt3_long
-        elif aktion == "d":
-            return e_choice
-        else:
-            print("\nUngültige Eingabe. a, b oder c ?\n")
+    if estring == "":
+        while aktion != "a" and aktion != "b" and aktion != "c":
+            aktion = input("-->")
+            if aktion == "a": 
+                return opt1_long
+            elif aktion == "b":
+                return opt2_long
+            elif aktion == "c":
+                return opt3_long
+            else:
+                print("\nUngültige Eingabe. a, b oder c ?\n")
+    else:
+        while aktion != "a" and aktion != "b" and aktion != "c" and aktion != "d":
+            aktion = input("-->")
+            if aktion == "a": 
+                return opt1_long
+            elif aktion == "b":
+                return opt2_long
+            elif aktion == "c":
+                return opt3_long
+            elif aktion == "d":
+                return e_choice
+            else:
+                print("\nUngültige Eingabe. a, b, c oder d ?\n")
 
 def Geschichte_2(intro,opt1, opt2, opt1_long, opt2_long, e_choice = ""):   # Geschichte mit 4 Auswahlmöglichkeiten
 #Fragen schoener ausgeben:
@@ -223,32 +249,65 @@ f"""
     )
 
     aktion = ""
-    while aktion != "a" and aktion != "b" and aktion != "c" and aktion != "d":
-       # print(opts)
-        aktion = input("-->")
-        if aktion == "a": 
-            return opt1_long
-        elif aktion == "b":
-            return opt2_long
-        elif aktion == "c":
-            return e_choice
-        else:
-            print("\nUngültige Eingabe. a, b, c oder d ?\n")
+    if estring == "":
+        while aktion != "a" and aktion != "b":
+            aktion = input("-->")
+            if aktion == "a": 
+                return opt1_long
+            elif aktion == "b":
+                return opt2_long
+            else:
+                print("\nUngültige Eingabe. a oder b ?\n")
+    else:
+        while aktion != "a" and aktion != "b" and aktion != "c":
+            aktion = input("-->")
+            if aktion == "a": 
+                return opt1_long
+            elif aktion == "b":
+                return opt2_long
+            elif aktion == "c":
+                return e_choice
+            else:
+                print("\nUngültige Eingabe. a, b oder c ?\n")
+                
+                
+def Anfangstext_print(Anfangstext, print_speed=0.04):
+	for i in Anfangstext:
+		sys.stdout.write(i)
+		sys.stdout.flush()
+		time.sleep(print_speed)
 
+        
 Liste_Geschichte = []
 
 def main():  #Alles, was nicht beim Importieren dieser Datei ausgeführt werden soll
+    #Die Anfangsanimation 
     writeomattext = pyfiglet.figlet_format("Write - o - mat") # Write-o-mat in groß zu Beginn ausgeben
     print(writeomattext)
-    name = input("Name des Autors -->").capitalize()      # Wird in bei der Benennung der Textdatei benutzt; Erster Buchstabe Groß, Rest klein
-    Titel = pyfiglet.figlet_format(input("Titel: \n-->"))
+    Anfangstext = "Herzlich Willkommen bei Write-o-mat :) \nHier kannst du aus einer Vielzahl an Bausteinen deine Individuelle Geschichte erstellen. \nViel Spaß!"
+    Anfangstext_print(Anfangstext)
+    clear()
+    timer = 3
+    space = "\n" * 10
+    space2 = " " * 50
+    while timer >0:
+        print(writeomattext)
+        print(Anfangstext)
+        print(f"{space}{space2}Start in {timer}")
+        timer = timer -1
+        time.sleep(1)
+        clear()
+        
+    print(writeomattext)
+    name = input("\nName des Autors -->").capitalize()      # Wird in bei der Benennung der Textdatei benutzt; Erster Buchstabe Groß, Rest klein
+    Titel = pyfiglet.figlet_format(input("\nTitel: \n-->"))
     
     #Die Geschichten werden im Maskulinum erzählt und später ggf. mit regex verändert 
-    Geschlecht = input("Wähle das Geschleicht deines Protagonisten/ deiner Protagonistin (m/w) \n-->").upper()
+    Geschlecht = input("\nWähle das Geschleicht deines Protagonisten/ deiner Protagonistin (m/w) \n-->").upper()
     while Geschlecht != "M" and Geschlecht != "W":     # Um andere Eingaben zu vermeiden
         Geschlecht = input("M/W?\n-->").upper()
     
-    Genre = input("Wähle das Genre deiner Geschichte: \na) Horror \nb) Fantasy \nc) Science-Fiction \n-->")
+    Genre = input("\nWähle das Genre deiner Geschichte: \na) Horror \nb) Fantasy \nc) Science-Fiction \n-->")
     while Genre != "a" and Genre != "b" and Genre != "c":     # Um andere Eingaben zu vermeiden
         Genre = input("a, b oder c?\n-->")
     
@@ -288,12 +347,13 @@ def main():  #Alles, was nicht beim Importieren dieser Datei ausgeführt werden 
 #        for line in file:
 #            print(line)
 
+    clear()
+    print(pyfiglet.figlet_format("Write - o - mat"))
     response = input("Möchten Sie die Geschichte vorgelesen haben wollen? (J/N)\n-->").upper()
     while response != "J" and response != "N":  #um falsche eingaben zu vermeiden
      response = input("J/N?\n-->").upper()
     if response == "J":
-        print("Hier ist die Stimme")  #gibt die Stimme aus
-        sprachausgabe()
+        sprachausgabe()  #gibt die Stimme aus
     else:
         print("OK, keine Stimme wird abgespielt.") #wird keine Stimme ausgegeben 
   
