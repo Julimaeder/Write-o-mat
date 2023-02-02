@@ -25,7 +25,7 @@ jobs:
 #        # exit-zero treats all errors as warnings. The GitHub editor is 127 charswide
 #        flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
       - run: echo "This job's status is ${{ job.status }}."
-      - run: Writeomat_open.py
+      - run: python Writeomat_open.py
       
   build-on-Mac-and-Linux:
     #Mac und Linux testen
@@ -52,4 +52,4 @@ jobs:
  #       # exit-zero treats all errors as warnings. The GitHub editor is 127 charswide
  #       flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
       - run: echo "This job's status is ${{ job.status }}."
-      - run: Writeomat.py
+      - run: python Writeomat.py
