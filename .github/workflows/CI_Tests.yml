@@ -17,7 +17,7 @@ jobs:
       - name: Libraries installieren
         run: |
           python -m pip install --upgrade pip
-          python -m pip install random os pyfiglet sys subprocess pyttsx3 time flake8 pytest
+          python -m pip install pyfiglet subprocess pyttsx3 flake8 pytest
 #     - name: Lint with flake8
 #        run: |
 #        # stop the build if there are Python syntax errors or undefined names
@@ -44,7 +44,7 @@ jobs:
       - name: Libraries installieren
         run: |
           python -m pip install --upgrade pip
-          python -m pip install random os pyfiglet sys subprocess pyttsx3 time flake8 pytest
+          python -m pip install pyfiglet subprocess pyttsx3 flake8 pytest
  #     - name: Lint with flake8
  #       run: |
  #       # stop the build if there are Python syntax errors or undefined names
