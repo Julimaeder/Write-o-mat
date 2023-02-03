@@ -47,8 +47,6 @@ def sprachausgabe():
     tts_female = gTTS("Hallo, ich bin eine deutsche weibliche Stimme", lang='de', slow=False, voice='f')
     tts_female.save("female_voice.mp3")        
 
-
-
 def clear():
     if sys.platform == "win32" or sys.platform == "darwin": #Windows oder Mac
         clear_command = 'cls'
@@ -216,8 +214,7 @@ f"""
         elif aktion == "b":
             return opt2_long
         else:
-            print("\nUngültige Eingabe. a oder b ?\n")
-
+            print("\nUngültige Eingabe. a, b, c oder d ?\n")
 
 Liste_Geschichte = []
 
@@ -227,11 +224,7 @@ def main():  #Alles, was nicht beim Importieren dieser Datei ausgeführt werden 
     name = input("Name des Autors -->").capitalize()      # Wird in bei der Benennung der Textdatei benutzt; Erster Buchstabe Groß, Rest klein
     Titel = pyfiglet.figlet_format(input("Titel: \n-->"))
     
-  
-   
-    
     #Die Geschichten werden im Maskulinum erzählt und später ggf. mit regex verändert 
-
     Geschlecht = input("Wähle das Geschleicht deines Protagonisten/ deiner Protagonistin (m/w) \n-->").upper()
     while Geschlecht != "M" and Geschlecht != "W":     # Um andere Eingaben zu vermeiden
         Geschlecht = input("M/W?\n-->").upper()
@@ -267,8 +260,7 @@ def main():  #Alles, was nicht beim Importieren dieser Datei ausgeführt werden 
     output.close()
     if Geschlecht == "W":       
         pass    #Regex zum Verändern des Geschlechts
-  
-    
+
 #    #Alte Ausgabe in der Konsole:
 #    filename = f"{name}'s Geschichte.txt"
 #    with open(filename, "r", encoding="utf-8") as file:
@@ -296,9 +288,23 @@ def main():  #Alles, was nicht beim Importieren dieser Datei ausgeführt werden 
         subprocess.call(["open", f"{name}'s Geschichte.txt"])
     else: # Linux
         subprocess.call(["xdg-open", f"{name}'s Geschichte.txt"])
-    
+     
     #Sprachausgabe:
-
+    text = " ".join(Liste_Geschichte[2:]) 
+    if schnelligkeit == "L":
+        engine.setProperty("rate", 150)  
+        engine.say(text)  
+        engine.runAndWait()
+    elif schnelligkeit == "M":
+        engine.setProperty("rate", 200)  
+        engine.say(text)  
+        engine.runAndWait()
+    elif schnelligkeit == "S":
+        engine.setProperty("rate", 250)  
+        engine.say(text)  
+        engine.runAndWait()
+    else: 
+        print("L = Langsam, M= Mittel, S = Schnell")
        
 if __name__ == "__main__":
     main()
@@ -308,8 +314,6 @@ if __name__ == "__main__":
 """                
 Probleme: 
     - Name_Held je nach Geschlecht anpassen
-    - While schleife um die Geschwindigkeitseingabe bei gtts, damit nur "L", "M" und "S" wählen kann
-    - Sprachausgabe optional
      
 Notizen:
     Wichtige Sachen im Code mit #!!! markieren

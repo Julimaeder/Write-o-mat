@@ -1,6 +1,10 @@
 # -*- coding: utf-8 -*-
 from Writeomat import Geschichte_2, Geschichte_3, Geschichte_4
+<<<<<<< HEAD
 import random
+=======
+
+>>>>>>> 1ce0aef4edf34551f85cd4fa0fa6c1825104b7a2
 #if Geschlecht == "M":
 Name_Held = input("Wähle den Namen deines Protagonisten \n-->").capitalize()
 #elif Geschlecht == "W":
@@ -20,6 +24,7 @@ Horror_Geschichte_1 = Geschichte_4("Wähle den Helden deiner Geschichte ",
             f"Eines Tages kan ein Mensch {Name_Held}. Dieser ",
             f"Eines Tages kam ein Magier {Name_Held}. Dieser ",
             f"Eines Tages kam ein edler Ritter {Name_Held}. Dieser ")
+<<<<<<< HEAD
 
 
 Horror_Geschichte_2 = Geschichte_4("Wähle deinen Gefährten",
@@ -47,6 +52,8 @@ Horror_Geschichte_4 = Geschichte_4("Wähle den Antagonisten deiner Geschichte",
            f"begegneten {Name_Held} eines Tages einem {random.choice(liste_Geschichte_4)}. Dieser" )
 
 
+=======
+>>>>>>> 1ce0aef4edf34551f85cd4fa0fa6c1825104b7a2
 
 Horror_Geschichte_5 = Geschichte_4("An welchem Ort willst du starten",
            "Einem Friedhof", "Ein altes Haus im Wald", "Eine Kirmes", "Ein Schloss",
@@ -55,6 +62,7 @@ Horror_Geschichte_5 = Geschichte_4("An welchem Ort willst du starten",
            "Wacht auf einer Kirmes auf. ",
            "Wacht in einem Schloss auf. ")
 
+<<<<<<< HEAD
 
 Horror_Geschichte_6 = Geschichte_4("Was ist seine Mission?",
            "Eine Prinzessin retten","der beste werden","Menschen schützen","den Antagonisten töten",
@@ -74,6 +82,26 @@ Horror_Geschichte_7 = Geschichte_3("Was ist das Gefährt des Helden?",
 
 
 
+=======
+Horror_Geschichte_3 = Geschichte_4("Wähle den Antagonisten deiner Geschichte",
+          " Ein Clown"," Ein Zombie"," Ein Werwolf","Ein Geist",
+           "",
+           "",
+           "",
+           "")    
+
+# Vorerst nicht appenden, soll am Anfang ausgewählt, und später genutzt werden
+Horror_Geschichte_4 = Geschichte_3("Test für 3 Auswahlmöglichkeiten und zum testen kommt hier noch ein längerer Text rein.",
+           "Nummero uno","Option 2","Drei",
+           "Nummero uno",
+           "Option 2",
+           "Drei")
+
+Horror_Geschichte_5 = Geschichte_2("Test für zwei Auswahlmöglichkeiten Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magn",
+           "Nummero uno","Option 2",
+           "Nummero uno",
+           "Option 2")
+>>>>>>> 1ce0aef4edf34551f85cd4fa0fa6c1825104b7a2
 
 # Vorerst nicht appenden, soll am Anfang ausgewählt, und später genutzt werden
 if Horror_Geschichte_3 != "d":
