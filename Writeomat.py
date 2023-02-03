@@ -36,6 +36,16 @@ def sprachausgabe():
         engine.runAndWait()
     else: 
         print("L = Langsam, M= Mittel, S = Schnell")
+        
+   
+def sprachausgabe():
+    # Male voice
+    tts_male = gTTS("Hallo, ich bin eine deutsche Männerstimme", lang='de', slow=False, voice='m')
+    tts_male.save("male_voice.mp3")
+
+    # Female voice
+    tts_female = gTTS("Hallo, ich bin eine deutsche weibliche Stimme", lang='de', slow=False, voice='f')
+    tts_female.save("female_voice.mp3")        
 
 def clear():
     if sys.platform == "win32" or sys.platform == "darwin": #Windows oder Mac
@@ -343,11 +353,6 @@ def main():  #Alles, was nicht beim Importieren dieser Datei ausgeführt werden 
     if Geschlecht == "W":       
         pass    #Regex zum Verändern des Geschlechts
 
-#    #Alte Ausgabe in der Konsole:
-#    filename = f"{name}'s Geschichte.txt"
-#    with open(filename, "r", encoding="utf-8") as file:
-#        for line in file:
-#            print(line)
 
     clear()
     print(pyfiglet.figlet_format("Write - o - mat"))
@@ -358,7 +363,9 @@ def main():  #Alles, was nicht beim Importieren dieser Datei ausgeführt werden 
         sprachausgabe()  #gibt die Stimme aus
     else:
         print("OK, keine Stimme wird abgespielt.") #wird keine Stimme ausgegeben 
+    
   
+
 
     if sys.platform == "win32": # Windows
         os.startfile(f"{name}'s Geschichte.txt")
