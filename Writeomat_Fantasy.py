@@ -1,31 +1,54 @@
 # -*- coding: utf-8 -*-
 
-from Writeomat import Geschichte
-Name_Held = input("Wähle den Namen deines Protagonisten \n-->")
+from Writeomat import Geschichte_4, Geschichte_3, Geschichte_2
 
-Fantasy_Geschichte_1 = Geschichte("Wähle den Helden deiner Geschichte ",
-           "a) Eine gute Fee \nb) Ein Oger \nc) Ein Magier \nd) Ein Zwerg",
+#if Geschlecht == "M":    
+#Name_Held = input("Wähle den Namen deines Protagonisten \n-->")
+#Name_Held = input("a")
+
+#if Geschlecht == "M":
+Name_Held = input("Wähle den Namen deines Protagonisten \n-->").capitalize()
+#elif Geschlecht == "W":
+ #   Name_Held = input("Wähle den Namen deiner Protagonistin \n-->")
+#else:
+  #  print(Geschlecht)
+
+Fantasy_Geschichte_1 = Geschichte_4("Wähle den Helden deiner Geschichte ",
+           "Eine gute Fee","Ein Oger","Ein Magier","Ein Zwerg",
            f"Es war einmal eine gute Fee namens {Name_Held}. Diese ",
            f"Es war einmal ein Oger namens {Name_Held}. Dieser ",
            f"Es war einmal ein Magier namens {Name_Held}. Dieser ",
            f"Es war einmal ein kleiner Zwerg namens {Name_Held}. Dieser ")
 
-Fantasy_Geschichte_2 = Geschichte("Welches Gefährt hat dein Held",
-           "a) Ein Pferd \nb) Ein Riese \nc) Eine Kutsche \nd) Zu Fuß",
+Fantasy_Geschichte_2 = Geschichte_4("Welches Gefährt hat dein Held",
+           "Ein Pferd","Ein Riese","Eine Kutsche","Zu Fuß",
            "reitet voller Hochmut ein starkes Ross. ",
            "sitzt auf dem Rücken eines stolzen Riesen. ",
            "fährt in einer Kutsche dem Horizont entgegen. ",
            "schreitet tapfer zu fuße voran. ")
 
-Fantasy_Geschichte_3 = Geschichte("Wähle den Antagonisten deiner Geschichte",
-           "a) Ein dunkler Magier \nb) Ein Drache \nc) Eine Truppe Orks \nd) kein Antagonist",
+
+Fantasy_Geschichte_3 = Geschichte_4("Wähle den Antagonisten deiner Geschichte",
+           "Ein dunkler Magier","Ein Drache","Eine Truppe Orks","kein Antagonist",
            "",
            "",
            "",
-           "")    
+           "")  
+
+Fantasy_Geschichte_4 = Geschichte_3("Test für 3 Auswahlmöglichkeiten und zum testen kommt hier noch ein längerer Text rein.",
+           "Nummero uno","Option 2","Drei",
+           "Nummero uno",
+           "Option 2",
+           "Drei")
+
+Fantasy_Geschichte_5 = Geschichte_2("Test für zwei Auswahlmöglichkeiten Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magn",
+           "Nummero uno","Option 2",
+           "Nummero uno",
+           "Option 2")
+
             # Vorerst nicht appenden, soll am Anfang ausgewählt, und später genutzt werden
 if Fantasy_Geschichte_3 != "d":
-    Name_Gegner = input("Wähle den Namen deines Antagonisten \n-->")
+    Name_Gegner = input("\nWähle den Namen deines Antagonisten \n-->").capitalize()
 else: 
     Name_Gegner = ("")
     
@@ -67,7 +90,6 @@ def Titelblatt(Fanatsy_Geschichte_1):
                                                                 .@%       %@.                                 
                                                                   %(        .(                                
                                                                      
-
         """
                )
     elif "Oger" in Fantasy_Geschichte_1:
@@ -103,7 +125,6 @@ def Titelblatt(Fanatsy_Geschichte_1):
                           ##%&#//////////////////////&%(                      
                              ####%%%%&&&&&&&&&&&&%%(((     
                              
-
         """
                )
     elif "Magier" in Fantasy_Geschichte_1:
@@ -144,7 +165,6 @@ def Titelblatt(Fanatsy_Geschichte_1):
                  #%*#.***/%(/,*(.,(/#..*(#*(../%%&/#...%&%#..%(.**                   
                                     .*/(&%&&%*,...,#&&,...%&(                        
        
-
         """
                )
     elif "Zwerg" in Fantasy_Geschichte_1:
@@ -183,7 +203,6 @@ def Titelblatt(Fanatsy_Geschichte_1):
             ((&##########%(#########%%%*                                        
          ############&(############%%%%                                         
                      %#####%%%%%%,        
-
                                      
         """
                )
