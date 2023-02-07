@@ -1,0 +1,4 @@
+pyfiglet
+pyttsx3
+flake8
+pytest
