@@ -1,14 +1,14 @@
+![GitHub](https://img.shields.io/github/license/Julimaeder/Write-o-mat)
+![GitHub](https://img.shields.io/github/directory-file-count/Julimaeder/Write-o-mat)
 # Write-o-mat
 Write-o-mat ist ein Programm zum Schreiben von Geschichten, indem Sie einfach zwischen verschiedenen Möglichkeiten wählen.
-Jenachdem wie Sie sich entscheiden nimmt die Geschichte verschiedene Wendungen und es kommt zu verschiedenen Enden.
+Jenachdem wie Sie sich entscheiden nimmt die Geschichte verschiedene Wendungen und es kommt zu unterschiedlichen Enden.
 
 
-
-### Inhaltsverzeichnis
+## Inhaltsverzeichnis
 
 - [Vorraussetzungen](#Vorraussetzungen)
-- [Installation](#Installation)
-- [Anwendung](#Anwendung)
+- [Installation/Anwendung](#Installation/Anwendung)
 - [Anwendungsbeispiele](#Anwendungsbeispiele)
 - [Metadaten](#Metadaten)
 
@@ -20,46 +20,52 @@ Jenachdem wie Sie sich entscheiden nimmt die Geschichte verschiedene Wendungen u
 - Kenntnisse im Umgang mit der Shell Konsole
 
 
-  [zurück an den Anfang](#Write-o-mat)
+[zurück an den Anfang](#Write-o-mat)
 
 
-### Installation
-
-Mac:
-git clone https://github.com/Julimaeder/Write-o-mat.git
-
+## Installation und Anwendung
 
 Windows:
+```shell
 git clone https://github.com/Julimaeder/Write-o-mat.git
+cd Write-o-mat
+pip install -r libraries.txt
+cd Writeomat
+python Writeomat_open.py
+```
 
-
+Mac:
+```Shell
+git clone https://github.com/Julimaeder/Write-o-mat.git
+cd Write-o-mat
+pip install -r libraries.txt
+cd Writeomat
+python Writeomat.py
+```
 
 Linux:
+```Shell
 git clone https://github.com/Julimaeder/Write-o-mat.git
-
+cd Write-o-mat
+pip install -r libraries.txt
+cd Writeomat
+python Writeomat.py
+```
 
 
 [zurück an den Anfang](#Write-o-mat)
 
-
-### Anwendung 
-
-Unter allen OS: Writeomat.py im Terminal ausführen
-
-Optional unter Windows: Writeomat_open.py in einer beliebigen Python IDE ausführen
-
-  [zurück an den Anfang](#Write-o-mat)
   
 
-#### Anwendungsbeispiele
+## Anwendungsbeispiele
 
-Unser Projekt Write-o-mat kann zum einen als
+Unser Projekt Write-o-mat kann als
 - Inspiration
 - Zeitvertreib
 - Schreiben von Kurzgeschichten
 - Schreiben von Professionellen Kurzgeschichten
 
-benutzen 
+genutzt werden.
 
 
 [zurück an den Anfang](#Write-o-mat)
@@ -77,12 +83,3 @@ benutzen
 
 [zurück an den Anfang](#Write-o-mat)
 
-
-
-
-                                                                        
-
-                                                                        
-                                                                        
-   
-   
