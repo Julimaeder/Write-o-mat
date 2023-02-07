@@ -5,7 +5,7 @@ Write-o-mat ist ein Programm zum Schreiben von Geschichten, indem Sie einfach zw
 Jenachdem wie Sie sich entscheiden nimmt die Geschichte verschiedene Wendungen und es kommt zu verschiedenen Enden.
 
 
-### Inhaltsverzeichnis
+## Inhaltsverzeichnis
 
 - [Vorraussetzungen](#Vorraussetzungen)
 - [Installation/Anwendung](#Installation/Anwendung)
@@ -23,7 +23,9 @@ Jenachdem wie Sie sich entscheiden nimmt die Geschichte verschiedene Wendungen u
   [zurück an den Anfang](#Write-o-mat)
 
 
-### Installation
+## Installation/Anwendung
+
+#### Installation:
 
 Mac:
 ```Shell
@@ -31,6 +33,10 @@ git clone https://github.com/Julimaeder/Write-o-mat.git
 cd Write-o-mat
 pip install -r libraries.txt
 ```
+#### Anwendung: 
+Writeomat.py im Terminal ausführen
+
+#### Installation:
 
 Windows:
 ```shell
@@ -38,6 +44,10 @@ git clone https://github.com/Julimaeder/Write-o-mat.git
 cd Write-o-mat
 pip install -r libraries.txt
 ```
+#### Anwendung: 
+Optional unter Windows: Writeomat_open.py in einer beliebigen Python IDE ausführen
+
+#### Installation:
 
 Linux:
 ```Shell
@@ -45,19 +55,15 @@ git clone https://github.com/Julimaeder/Write-o-mat.git
 cd Write-o-mat
 pip install -r libraries.txt
 ```
-[zurück an den Anfang](#Write-o-mat)
-
-
-### Anwendung 
-
-Unter allen OS: Writeomat.py im Terminal ausführen
-
+#### Anwendung: 
 Optional unter Windows: Writeomat_open.py in einer beliebigen Python IDE ausführen
 
-  [zurück an den Anfang](#Write-o-mat)
+
+[zurück an den Anfang](#Write-o-mat)
+
   
 
-#### Anwendungsbeispiele
+## Anwendungsbeispiele
 
 Unser Projekt Write-o-mat kann zum einen als
 - Inspiration
