@@ -4,7 +4,6 @@
 Write-o-mat ist ein Programm zum Schreiben von Geschichten, indem Sie einfach zwischen verschiedenen Möglichkeiten wählen.
 Jenachdem wie Sie sich entscheiden nimmt die Geschichte verschiedene Wendungen und es kommt zu verschiedenen Enden.
 
-![GitHub](https://img.shields.io/github/license/BergmannJustin/Write-o-mat)
 
 ### Inhaltsverzeichnis
 
