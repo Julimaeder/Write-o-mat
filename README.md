@@ -30,30 +30,21 @@ Mac:
 ```Shell
 git clone https://github.com/Julimaeder/Write-o-mat.git
 cd Write-o-mat
-pip install pyfiglet
-pip install pyttsx3
-pip install flake8
-pip install pytest
+pip install -r libraries.txt
 ```
 
 Windows:
 ```shell
 git clone https://github.com/Julimaeder/Write-o-mat.git
 cd Write-o-mat
-pip install pyfiglet
-pip install pyttsx3
-pip install flake8
-pip install pytest
+pip install -r libraries.txt
 ```
 
 Linux:
 ```Shell
 git clone https://github.com/Julimaeder/Write-o-mat.git
 cd Write-o-mat
-pip install pyfiglet
-pip install pyttsx3
-pip install flake8
-pip install pytest
+pip install -r libraries.txt
 ```
 [zurück an den Anfang](#Write-o-mat)
 
