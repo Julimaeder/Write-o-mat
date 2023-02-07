@@ -281,7 +281,8 @@ def Anfangstext_print(Anfangstext, print_speed=0.04):
 Liste_Geschichte = []
 
 def main():  #Alles, was nicht beim Importieren dieser Datei ausgeführt werden soll
-    #Die Anfangsanimation 
+    #Die Anfangsanimation
+    clear()
     writeomattext = pyfiglet.figlet_format("Write - o - mat") # Write-o-mat in groß zu Beginn ausgeben
     print(writeomattext)
     Anfangstext = "Herzlich Willkommen bei Write-o-mat :) \nHier kannst du aus einer Vielzahl an Bausteinen deine Individuelle Geschichte erstellen. \nViel Spaß!"
