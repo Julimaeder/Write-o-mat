@@ -8,8 +8,7 @@ Jenachdem wie Sie sich entscheiden nimmt die Geschichte verschiedene Wendungen u
 ### Inhaltsverzeichnis
 
 - [Vorraussetzungen](#Vorraussetzungen)
-- [Installation](#Installation)
-- [Anwendung](#Anwendung)
+- [Installation & Anwendung](#Installation & Anwendungen]
 - [Anwendungsbeispiele](#Anwendungsbeispiele)
 - [Metadaten](#Metadaten)
 
