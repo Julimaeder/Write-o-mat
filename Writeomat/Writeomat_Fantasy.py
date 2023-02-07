@@ -20,18 +20,18 @@ Name_Held = input("\nWähle den Namen deines Protagonisten \n-->").capitalize()
 
 Fantasy_Geschichte_1 = Geschichte_4("Wähle den Helden deiner Geschichte ",
            "Eine gute Fee","Ein Oger","Ein Magier","Ein Zwerg",
-           f"Es war einmal eine gute Fee namens {Name_Held}. Diese ",
-           f"Es war einmal ein Oger namens {Name_Held}. Dieser ",
-           f"Es war einmal ein Magier namens {Name_Held}. Dieser ",
-           f"Es war einmal ein kleiner Zwerg namens {Name_Held}. Dieser ")
+           f"Es war einmal eine gute Fee namens {Name_Held}. Diese",
+           f"Es war einmal ein Oger namens {Name_Held}. Dieser",
+           f"Es war einmal ein Magier namens {Name_Held}. Dieser",
+           f"Es war einmal ein kleiner Zwerg namens {Name_Held}. Dieser")
 
 Fantasy_Geschichte_2 = Geschichte_4("Welches Gefährt hat dein Held",
            "Ein Pferd","Ein Riese","Eine Kutsche","Zu Fuß",
-           "reitet voller Hochmut ein starkes Ross. ",
-           "sitzt auf dem Rücken eines stolzen Riesen. ",
-           "fährt in einer Kutsche dem Horizont entgegen. ",
-           "schreitet tapfer zu fuße voran. ",
-           f"bewegt sich auf einem {random.choice(liste_Geschichte_2)} fort. ")
+           "reitet voller Hochmut ein starkes Ross.",
+           "sitzt auf dem Rücken eines stolzen Riesen.",
+           "fährt in einer Kutsche dem Horizont entgegen.",
+           "schreitet tapfer zu fuße voran.",
+           f"bewegt sich auf einem {random.choice(liste_Geschichte_2)} fort.")
 
 Fantasy_Geschichte_3 = Geschichte_4("Wähle den Antagonisten deiner Geschichte",
            "Ein dunkler Magier","Ein Drache","Eine Truppe Orks","kein Antagonist",
@@ -61,7 +61,7 @@ Fantasy_Geschichte_6 = Geschichte_2("Test für zwei Auswahlmöglichkeiten Lorem 
 
 Fantasy_Geschichte_7 = Geschichte_2("Test für zwei Auswahlmöglichkeiten Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magn",
            "Nummero uno","Option 2",
-           "Nummero uno",
+           "hadiuasduiahsd asodahsdhaoisd iosda asiodhoasd asjdoas asj asdnasdasd asd asdde wwe fwefwef wefwfwe fwefwef wef wefwf fwefwefw wefwefwef wefwefwefwefwef wefwefwfw ef wefwefw efwefef wef wefef wefwefwefwe fwefwef wefwef",
            "Option 2",
            f"text {random.choice(liste_Geschichte_test)} text")
 
@@ -77,7 +77,8 @@ Fantasy_Geschichte_Text_1 = ""
 def Titelblatt(Fanatsy_Geschichte_1):
     if "Fee" in Fantasy_Geschichte_1:
         return(
-        """                                                                                                      
+        """
+\n                                                                                                      
                                                                                                               
                         #(&              ,@@@@@@@@@@@@@                                                       
                             .@@@@*      @@@@@@@@@@@@@@@@&          .(                                         
@@ -109,11 +110,13 @@ def Titelblatt(Fanatsy_Geschichte_1):
                                                                 .@%       %@.                                 
                                                                   %(        .(                                
                                                                      
-        """
+\n\n
+"""
                )
     elif "Oger" in Fantasy_Geschichte_1:
         return(
         """
+\n
                                                                                
                              ,(#(,,,,,,,,,,,,,,(#(                            
                           (#,,,,,,,,,,,,,,,,,,,,,,,,#(                        
@@ -144,11 +147,13 @@ def Titelblatt(Fanatsy_Geschichte_1):
                           ##%&#//////////////////////&%(                      
                              ####%%%%&&&&&&&&&&&&%%(((     
                              
-        """
+\n\n
+"""
                )
     elif "Magier" in Fantasy_Geschichte_1:
         return(
         """
+\n
                                        /(*                                          
      (,,/*   *%                      *%(/((((/#&&.                                   
     .*,,.,.,,,#,                   &((///******((((%&                                
@@ -184,11 +189,13 @@ def Titelblatt(Fanatsy_Geschichte_1):
                  #%*#.***/%(/,*(.,(/#..*(#*(../%%&/#...%&%#..%(.**                   
                                     .*/(&%&&%*,...,#&&,...%&(                        
        
-        """
+\n\n
+"""
                )
     elif "Zwerg" in Fantasy_Geschichte_1:
         return(
         """
+\n
                                      ,%%.                                       
                          /(*/(,,,,/////////,,*                                  
                     ,,*////////////%///////////,                                
@@ -222,15 +229,9 @@ def Titelblatt(Fanatsy_Geschichte_1):
             ((&##########%(#########%%%*                                        
          ############&(############%%%%                                         
                      %#####%%%%%%,        
-                                     
-        """
+                                   
+\n\n
+"""
                )
     else:
         return (f"FEHLER! Fantasy_Geschichte_1 = {Fantasy_Geschichte_1}")
-'''
-Todo:
-    - Name_Gegner hinzufügen
-Ideen: 
-    - Einen Begleiter optional mitnehmen 
-    - Zufallsevent
-'''
