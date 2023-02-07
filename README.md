@@ -65,20 +65,13 @@ benutzen
 
 [zurück an den Anfang](#Write-o-mat)
 
-## Versionsverlauf
 
-
-
-
-
-
-[zurück an den Anfang](#Write-o-mat)
 
 ## Metadaten
 
 
 - Justin - Github: @BergmannJustin
-- Julian - Github: @Julimaeder
+- Julian Mäder - Github: @Julimaeder
 - Fatma - Github: @ftmct
 - Ersan - Github: @ErsanK61
 
