@@ -10,7 +10,6 @@ Jenachdem wie Sie sich entscheiden nimmt die Geschichte verschiedene Wendungen u
 - [Installation](#Installation)
 - [Anwendung](#Anwendung)
 - [Anwendungsbeispiele](#Anwendungsbeispiele)
-- [Versionsverlauf](#Versionsverlauf)
 - [Metadaten](#Metadaten)
 
 
@@ -70,10 +69,10 @@ benutzen
 ## Metadaten
 
 
-- Justin - Github: @BergmannJustin
+- Justin Bergmann - Github: @BergmannJustin
 - Julian Mäder - Github: @Julimaeder
-- Fatma - Github: @ftmct
-- Ersan - Github: @ErsanK61
+- Fatma Cetinkaya - Github: @ftmct
+- Ersan Kahraman - Github: @ErsanK61
 
 
 [zurück an den Anfang](#Write-o-mat)
