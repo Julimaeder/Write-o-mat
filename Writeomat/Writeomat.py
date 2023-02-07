@@ -338,9 +338,27 @@ def main():  #Alles, was nicht beim Importieren dieser Datei ausgeführt werden 
 
 
 
-    #Geschichte in eine txt Datei schreiben  
+    # Geschichte in eine txt Datei schreiben  
+    # Wird in max 5 Zeilen geteilt
     output = open(f"{name}'s Geschichte.txt", "w", encoding="utf-8")
-    output.write(str("".join(Liste_Geschichte))) # "".join(Liste) ist eien Funktion um die Liste ohne Sonderzeichen zu speichern; in den "" steht wodurch die Elemente getrennt werden
+    output.write(str("".join(Liste_Geschichte[:2]))) # "".join(Liste) ist eien Funktion um die Liste ohne Sonderzeichen zu speichern; in den "" steht wodurch die Elemente getrennt werden
+    long_text = " ".join(Liste_Geschichte[2:])
+    
+    space_position1 = long_text[100:].find(" ")+1 # Der nächste space character ab Zeichen 100 wird gesucht // +1 damit das Leerzeichen noch in der alten Zeile steht 
+    short_text1 = long_text[:100 + space_position1]
+    
+    space_position2 = long_text[len(short_text1) + 100:].find(" ")+1
+    short_text2 = long_text[len(short_text1) :len(short_text1) + 100 + space_position2]
+    
+    space_position3 = long_text[len(short_text1) + len(short_text2) + 100:].find(" ")+1
+    short_text3 = long_text[len(short_text1) + len(short_text2) :len(short_text1) + len(short_text2) + 100 + space_position3]
+    
+    space_position4 = long_text[len(short_text1) + len(short_text2) + len(short_text3) + 100:].find(" ")+1
+    short_text4 = long_text[len(short_text1) + len(short_text2) + len(short_text3) :len(short_text1) + len(short_text2) + len(short_text3) + 100 + space_position4]
+
+    short_text5 = long_text[len(short_text1) + len(short_text2) + len(short_text3) + len(short_text4):]
+    clean_text = f"{short_text1}\n{short_text2}\n{short_text3}\n{short_text4}\n{short_text5}"
+    output.write(str(clean_text))
     output.close()
     if Geschlecht == "W":       
         pass    #Regex zum Verändern des Geschlechts
