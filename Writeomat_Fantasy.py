@@ -109,7 +109,6 @@ def Titelblatt(Fanatsy_Geschichte_1):
                                                                 .@%       %@.                                 
                                                                   %(        .(                                
                                                                      
-
         """
                )
     elif "Oger" in Fantasy_Geschichte_1:
@@ -145,7 +144,6 @@ def Titelblatt(Fanatsy_Geschichte_1):
                           ##%&#//////////////////////&%(                      
                              ####%%%%&&&&&&&&&&&&%%(((     
                              
-
         """
                )
     elif "Magier" in Fantasy_Geschichte_1:
@@ -186,7 +184,6 @@ def Titelblatt(Fanatsy_Geschichte_1):
                  #%*#.***/%(/,*(.,(/#..*(#*(../%%&/#...%&%#..%(.**                   
                                     .*/(&%&&%*,...,#&&,...%&(                        
        
-
         """
                )
     elif "Zwerg" in Fantasy_Geschichte_1:
@@ -225,7 +222,6 @@ def Titelblatt(Fanatsy_Geschichte_1):
             ((&##########%(#########%%%*                                        
          ############&(############%%%%                                         
                      %#####%%%%%%,        
-
                                      
         """
                )

@@ -1,0 +1,56 @@
+name: CI_Tests
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+jobs:
+  build-on-Windows:
+    #Windows testen
+    runs-on: windows-latest
+    steps:
+      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+      - uses: actions/checkout@v3
+      - name: Python aufsetzen
+        uses: actions/setup-python@v3
+        with:
+          python-version: 3.9
+      - name: Libraries installieren
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install pyfiglet pyttsx3 flake8 pytest
+      - name: Lint with flake8
+        run: |
+          # stop the build if there are Python syntax errors or undefined names
+          flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+          # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
+          flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+      - name: Test with pytest
+        run: |
+          python -m pytest   
+  build-on-Mac-and-Linux:
+    #Mac und Linux testen
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [macos-latest, ubuntu-latest]
+
+    steps:
+      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+      - uses: actions/checkout@v3
+      - name: Python aufsetzen
+        uses: actions/setup-python@v3
+        with:
+          python-version: 3.9
+      - name: Libraries installieren
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install pyfiglet pyttsx3 flake8 pytest
+      - name: Lint with flake8
+        run: |
+          # stop the build if there are Python syntax errors or undefined names
+          flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+          # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
+          flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+      - name: Test with pytest
+        run: |
+          python -m pytest
