@@ -37,20 +37,11 @@ def sprachausgabe():
     else: 
         print("L = Langsam, M= Mittel, S = Schnell")
         
-   
-def sprachausgabe():
-    # Male voice
-    tts_male = gTTS("Hallo, ich bin eine deutsche Männerstimme", lang='de', slow=False, voice='m')
-    tts_male.save("male_voice.mp3")
-
-    # Female voice
-    tts_female = gTTS("Hallo, ich bin eine deutsche weibliche Stimme", lang='de', slow=False, voice='f')
-    tts_female.save("female_voice.mp3")        
 
 def clear():
-    if sys.platform == "win32" or sys.platform == "darwin": #Windows oder Mac
+    if sys.platform == "win32": #Windows 
         clear_command = 'cls'
-    else: # Linux
+    else: # Linux oder Mac
         clear_command = 'clear'
     os.system(clear_command)
 
