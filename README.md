@@ -25,7 +25,6 @@ Jenachdem wie Sie sich entscheiden nimmt die Geschichte verschiedene Wendungen u
 
 ## Installation/Anwendung
 
-#### Installation:
 
 Mac:
 ```Shell
@@ -36,7 +35,6 @@ pip install -r libraries.txt
 #### Anwendung: 
 Writeomat.py im Terminal ausführen
 
-#### Installation:
 
 Windows:
 ```shell
@@ -47,7 +45,6 @@ pip install -r libraries.txt
 #### Anwendung: 
 Optional unter Windows: Writeomat_open.py in einer beliebigen Python IDE ausführen
 
-#### Installation:
 
 Linux:
 ```Shell
