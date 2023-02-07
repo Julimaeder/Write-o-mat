@@ -8,10 +8,11 @@ import random
 
 liste_Geschichte_2 = ["Dreirad", "schwebenden Besen", "schnell hüpfenden Frosch", "Papierflieger", "Panzer"]
 liste_Geschichte_3 = ["Werwolf", "Riese", "Vampir", "Lavahund", "Babydragon"]
+liste_Geschichte_test = ["Test 1", "Test 2", "Test 3"]
 
 
 #if Geschlecht == "M":
-Name_Held = input("Wähle den Namen deines Protagonisten \n-->").capitalize()
+Name_Held = input("\nWähle den Namen deines Protagonisten \n-->").capitalize()
 #elif Geschlecht == "W":
  #   Name_Held = input("Wähle den Namen deiner Protagonistin \n-->")
 #else:
@@ -46,10 +47,23 @@ Fantasy_Geschichte_4 = Geschichte_3("Test für 3 Auswahlmöglichkeiten und zum t
            "Option 2",
            "Drei")
 
-Fantasy_Geschichte_5 = Geschichte_2("Test für zwei Auswahlmöglichkeiten Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magn",
+Fantasy_Geschichte_5 = Geschichte_3("Test für 3 Auswahlmöglichkeiten und zum testen kommt hier noch ein längerer Text rein.",
+           "Nummero uno","Option 2","Drei",
+           "Nummero uno",
+           "Option 2",
+           "Drei",
+           f"text {random.choice(liste_Geschichte_test)} text")
+
+Fantasy_Geschichte_6 = Geschichte_2("Test für zwei Auswahlmöglichkeiten Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magn",
            "Nummero uno","Option 2",
            "Nummero uno",
            "Option 2")
+
+Fantasy_Geschichte_7 = Geschichte_2("Test für zwei Auswahlmöglichkeiten Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magn",
+           "Nummero uno","Option 2",
+           "Nummero uno",
+           "Option 2",
+           f"text {random.choice(liste_Geschichte_test)} text")
 
             # Vorerst nicht appenden, soll am Anfang ausgewählt, und später genutzt werden
 if Fantasy_Geschichte_3 != "d":
