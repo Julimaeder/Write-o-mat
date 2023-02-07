@@ -1,5 +1,5 @@
 from PyDictionary import PyDictionary
-impoert re
+import re
 
 def Geschlecht_Angepasst(text, Geschlecht):
     if Geschlecht == 'M':
