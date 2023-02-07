@@ -27,19 +27,34 @@ Jenachdem wie Sie sich entscheiden nimmt die Geschichte verschiedene Wendungen u
 ### Installation
 
 Mac:
+```Shell
 git clone https://github.com/Julimaeder/Write-o-mat.git
-
+cd Write-o-mat
+pyfiglet
+pyttsx3
+flake8
+pytest
+```
 
 Windows:
+```shell
 git clone https://github.com/Julimaeder/Write-o-mat.git
-
-
+cd Write-o-mat
+pyfiglet
+pyttsx3
+flake8
+pytest
+```
 
 Linux:
+```Shell
 git clone https://github.com/Julimaeder/Write-o-mat.git
-
-
-
+cd Write-o-mat
+pyfiglet
+pyttsx3
+flake8
+pytest
+```
 [zurück an den Anfang](#Write-o-mat)
 
 
