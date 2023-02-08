@@ -1,73 +1,17 @@
 # -*- coding: utf-8 -*-
 
 import Writeomat
-
-
-def Titelblatt(SciFi_Geschichte_1):
-    if "Held" in SciFi_Geschichte_1:
-        return(
-        """
-                                              @@@@                              
-                    #@@@@@@@@@@               @@@@                              
-            (%        @@@@@@@@@@              @@@@                              
-#%%%%%%#*.(%%%%%(.*#%%%%( ,# @@             &%@@@@%%%#%%%%%%/                   
-    %%%%%%%%%%%%%%%%%%%%%%%%@@@#          .@@*//,,@@@@@@%%%%%%%%%%%%%%%%%%#     
-      #%%%%%%%%%%%%     @@@@@@%@@         @@@@,@@@@@@@@@%%%%%%%%%%%%%%%%%       
-                        @@ @@@@@@        @@@ @@@@@@& @@@%%%%%%%%%%%%%%%%        
-                       &@#  @@@@@       @@@* @@@@@@  &@@@%%%%%%%%%%%#*          
-                        @/ @@@@@@@      @@  &@@@@@@,  @@#.%%%%%%%%%%%           
-                        @#@&&&&@@&,     @&  @&@&@&&@ @@@   %%%%%%%%.            
-                        (@@@@@@@@@       @ (@@@ @@@@@@@     %%%                 
-                        &@@@  @@@@          @@@  @@@@        %(                 
-                        @@@   @@@           @@#   *@@                           
-                       #@@    @@@           @@@    @@@#                         
-                      *@@@    @@@           @@@@   @@@@                         
-                      @@@     @@            @@(     (@@                         
-                      @@      @@           *@@       @@                         
-                     @@       @@@        @@@@@      @@@                         
-                     @                               @@                         
-        """
-               )
-    elif "Bösewicht" in SciFi_Geschichte_1:
-        return(
-        """
-         .##.                                                    ,#(              
-           .@@@@(.                                          ,(@@@%.               
-             ,@@@@@@@(.                                .(@@@@@@@,                 
-               (@@@@@@@@@&/.                      .(&@@@@@@@@@/                   
-                 #@@@@@@@@@@@@%*             ./&@@@@@@@@@@@@#                     
-                                                                                  
-                                                                                  
-                                                                                  
-                        .(@@@@@@@@@@*    (@@@@@@@@@@/                             
-                            .#@@@@@@@@.*@@@@@@@@(                                 
-                                ,#@@@@@@@@@@(.                                    
-                                    ,#@@(.                                        
-                                                                                  
-                                                                                  
-                                                                                  
-                                                                                  
-.,,       ,,    ,,     ,,         .,.             ,,        ,,    .,,      ,,     
- /@@    ,@@.   ,@@.    @@*        #@(            &@@@      .@@.   (@@@/   .@@     
-  *@&  ,@@.    ,@@.    @@*        #@(          .&@,*@&.    .@@.   (@%.&@* .@@     
-   *@&,@@.     ,@@.    @@*        #@(         .&@,  *@&.   .@@.   (@%  ,@@,@@     
-    ,@@&.      ,@@.    @@@@@@@&   #@@@@@@@,  .&@*    *@&.  .@@.   (@%    /@@@     
-        """
-               )
-   
-    else:
-        return (f"FEHLER! SciFi_Geschichte_1 = {SciFi_Geschichte_1}")
-
+from Writeomat import Geschichte_2, Geschichte_3, Geschichte_4
 
 Name_Held = input("Wähle den Namen deines Protagonisten \n-->")
 
-SciFi_Geschichte_1 = Writeomat.Geschichte("Wähle den Helden deiner Geschichte ",
-                                "a) Super Held \nb) Bösewicht",
+SciFi_Geschichte_1 = Writeomat.Geschichte_2("Wähle den Helden deiner Geschichte ",
+                                " Super Held"," Bösewicht",
                                 f"Es war einmal in einer fernen Galaxie ein Held {Name_Held}. Dieser ",
                                 f"Es war einmal in einer fernen Galaxie ein Bösewicht namens {Name_Held} the destroyer. Dieser ")
 
-SciFi_Geschichte_2 = Writeomat.Geschichte("An welchem Ort willst du starten",
-                                "a) Raumschiff \nb) Planet Auria",
+SciFi_Geschichte_2 = Writeomat.Geschichte_2("An welchem Ort willst du starten",
+                                "Raumschiff","Planet Auria",
                                 "Er war in seinem riesen Raumschiff mit dem er durch die Galaxie reiste. ",
                                 "Er landete auf dem Planeten Auria, welcher bekannt für seine freundlichen Bewohner ist. ")
 
@@ -93,5 +37,70 @@ Er reiste zu den anderen Planeten, die er erobert hatte, und half beim Wiederauf
 Die Bewohner des Planeten Auria, die er einst bedroht hatte, nahmen ihn auf und betrachteten ihn als einen von ihnen. Er lebte unter ihnen und half beim Wiederaufbau ihrer Welt. Er hatte seinen Frieden gefunden und seine Seele war endlich ruhig.
 """
         )
+
+
+
+
+
+def Titelblatt(SciFi_Geschichte_1):
+    if "Held" in SciFi_Geschichte_1:
+        return(
+        """
+
+                                              @@@@                              
+                    #@@@@@@@@@@               @@@@                              
+            (%        @@@@@@@@@@              @@@@                              
+#%%%%%%#*.(%%%%%(.*#%%%%( ,# @@             &%@@@@%%%#%%%%%%/                   
+    %%%%%%%%%%%%%%%%%%%%%%%%@@@#          .@@*//,,@@@@@@%%%%%%%%%%%%%%%%%%#     
+      #%%%%%%%%%%%%     @@@@@@%@@         @@@@,@@@@@@@@@%%%%%%%%%%%%%%%%%       
+                        @@ @@@@@@        @@@ @@@@@@& @@@%%%%%%%%%%%%%%%%        
+                       &@#  @@@@@       @@@* @@@@@@  &@@@%%%%%%%%%%%#*          
+                        @/ @@@@@@@      @@  &@@@@@@,  @@#.%%%%%%%%%%%           
+                        @#@&&&&@@&,     @&  @&@&@&&@ @@@   %%%%%%%%.            
+                        (@@@@@@@@@       @ (@@@ @@@@@@@     %%%                 
+                        &@@@  @@@@          @@@  @@@@        %(                 
+                        @@@   @@@           @@#   *@@                           
+                       #@@    @@@           @@@    @@@#                         
+                      *@@@    @@@           @@@@   @@@@                         
+                      @@@     @@            @@(     (@@                         
+                      @@      @@           *@@       @@                         
+                     @@       @@@        @@@@@      @@@                         
+                     @                               @@                         
+
+
+        """
+               )
+    elif "Bösewicht" in SciFi_Geschichte_1:
+        return(
+        """
+
+         .##.                                                    ,#(              
+           .@@@@(.                                          ,(@@@%.               
+             ,@@@@@@@(.                                .(@@@@@@@,                 
+               (@@@@@@@@@&/.                      .(&@@@@@@@@@/                   
+                 #@@@@@@@@@@@@%*             ./&@@@@@@@@@@@@#                     
+                                                                                  
+                                                                                  
+                                                                                  
+                        .(@@@@@@@@@@*    (@@@@@@@@@@/                             
+                            .#@@@@@@@@.*@@@@@@@@(                                 
+                                ,#@@@@@@@@@@(.                                    
+                                    ,#@@(.                                        
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+.,,       ,,    ,,     ,,         .,.             ,,        ,,    .,,      ,,     
+ /@@    ,@@.   ,@@.    @@*        #@(            &@@@      .@@.   (@@@/   .@@     
+  *@&  ,@@.    ,@@.    @@*        #@(          .&@,*@&.    .@@.   (@%.&@* .@@     
+   *@&,@@.     ,@@.    @@*        #@(         .&@,  *@&.   .@@.   (@%  ,@@,@@     
+    ,@@&.      ,@@.    @@@@@@@&   #@@@@@@@,  .&@*    *@&.  .@@.   (@%    /@@@     
+
+
+        """
+               )
+   
+    else:
+        return (f"FEHLER! SciFi_Geschichte_1 = {SciFi_Geschichte_1}")
 
 
