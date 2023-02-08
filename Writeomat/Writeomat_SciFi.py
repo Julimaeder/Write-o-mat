@@ -7,7 +7,6 @@ def Titelblatt(SciFi_Geschichte_1):
     if "Held" in SciFi_Geschichte_1:
         return(
         """
-
                                               @@@@                              
                     #@@@@@@@@@@               @@@@                              
             (%        @@@@@@@@@@              @@@@                              
@@ -27,14 +26,11 @@ def Titelblatt(SciFi_Geschichte_1):
                       @@      @@           *@@       @@                         
                      @@       @@@        @@@@@      @@@                         
                      @                               @@                         
-
-
         """
                )
     elif "Bösewicht" in SciFi_Geschichte_1:
         return(
         """
-
          .##.                                                    ,#(              
            .@@@@(.                                          ,(@@@%.               
              ,@@@@@@@(.                                .(@@@@@@@,                 
@@ -56,8 +52,6 @@ def Titelblatt(SciFi_Geschichte_1):
   *@&  ,@@.    ,@@.    @@*        #@(          .&@,*@&.    .@@.   (@%.&@* .@@     
    *@&,@@.     ,@@.    @@*        #@(         .&@,  *@&.   .@@.   (@%  ,@@,@@     
     ,@@&.      ,@@.    @@@@@@@&   #@@@@@@@,  .&@*    *@&.  .@@.   (@%    /@@@     
-
-
         """
                )
    
@@ -77,10 +71,6 @@ SciFi_Geschichte_2 = Writeomat.Geschichte("An welchem Ort willst du starten",
                                 "Er war in seinem riesen Raumschiff mit dem er durch die Galaxie reiste. ",
                                 "Er landete auf dem Planeten Auria, welcher bekannt für seine freundlichen Bewohner ist. ")
 
-SciFi_Geschichte_3 = Writeomat.Geschichte("Welches Ende soll die Geschichte haben?",
-                                "a) Gutes Ende \nb) Schlechtes Ende",
-                                f"Nach vielen Abenteuern und Kämpfen hatte {Name_Held} es endlich geschafft, die Galaxie zu retten und Frieden zu bringen. ",
-                                f"Nach vielen Abenteuern und Kämpfen hatte {Name_Held} es endlich geschafft, die Galaxie zu unterwerfen und seine Macht zu festigen. ")
 
 if SciFi_Geschichte_1 == Writeomat.Geschichte:
     print(
@@ -104,14 +94,4 @@ Die Bewohner des Planeten Auria, die er einst bedroht hatte, nahmen ihn auf und 
 """
         )
 
-if SciFi_Geschichte_3:
-    print(
-f"""
-Aber {Name_Held}'s Machtgier war unersättlich und er beschloss, noch mehr Planeten zu erobern und noch mehr Macht zu sammeln.\n
-Er begann, seine ehemaligen Verbündeten zu verraten und sie an seine Feinde auszuliefern, um seine eigenen Ziele zu erreichen.\n
-Die Bewohner der Galaxie erkannten, dass {Name_Held} sich in einen tyranischen Herrscher verwandelt hatte und beschlossen, gegen ihn zu kämpfen.\n
-In einer finalen Schlacht schafften sie es, {Name_Held} zu besiegen und die Galaxie von seiner Tyrannei zu befreien. Aber der Preis war hoch, viele Leben wurden verloren und die Galaxie brauchte lange Zeit um sich von den Wunden zu erholen.\n
-Dies ist die Geschichte von {Name_Held}, der es fast geschafft hatte, die Galaxie zu retten, aber letztendlich von seiner Machtgier und Tyrannei zerstört wurde.
-"""
-        )
 
