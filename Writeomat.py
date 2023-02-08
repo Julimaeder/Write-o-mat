@@ -36,19 +36,9 @@ def sprachausgabe():
         engine.runAndWait()
     else: 
         print("L = Langsam, M= Mittel, S = Schnell")
-        
-   
-def sprachausgabe():
-    # Male voice
-    tts_male = gTTS("Hallo, ich bin eine deutsche Männerstimme", lang='de', slow=False, voice='m')
-    tts_male.save("male_voice.mp3")
-
-    # Female voice
-    tts_female = gTTS("Hallo, ich bin eine deutsche weibliche Stimme", lang='de', slow=False, voice='f')
-    tts_female.save("female_voice.mp3")        
 
 def clear():
-    if sys.platform == "win32" or sys.platform == "darwin": #Windows oder Mac
+    if sys.platform == "win32" : #Windows oder Mac
         clear_command = 'cls'
     else: # Linux
         clear_command = 'clear'
@@ -291,9 +281,10 @@ Liste_Geschichte = []
 
 def main():  #Alles, was nicht beim Importieren dieser Datei ausgeführt werden soll
     #Die Anfangsanimation 
+    clear()
     writeomattext = pyfiglet.figlet_format("Write - o - mat") # Write-o-mat in groß zu Beginn ausgeben
     print(writeomattext)
-    Anfangstext = "Herzlich Willkommen bei Write-o-mat :) \nHier kannst du aus einer Vielzahl an Bausteinen deine Individuelle Geschichte erstellen. \nViel Spaß!"
+    Anfangstext = "Herzlich Willkommen bei Write-o-mat 👋 \nHier kannst du aus einer Vielzahl an Bausteinen deine Individuelle Geschichte erstellen. \nViel Spaß!" 
     Anfangstext_print(Anfangstext)
     clear()
     timer = 3
@@ -326,6 +317,16 @@ def main():  #Alles, was nicht beim Importieren dieser Datei ausgeführt werden 
         Liste_Geschichte.append(Writeomat_Horror.Titelblatt(Writeomat_Horror.Horror_Geschichte_1))
         Liste_Geschichte.append(Writeomat_Horror.Horror_Geschichte_1)
         Liste_Geschichte.append(Writeomat_Horror.Horror_Geschichte_2)
+        Liste_Geschichte.append(Writeomat_Horror.Horror_Geschichte_3)
+        Liste_Geschichte.append(Writeomat_Horror.Horror_Geschichte_4)
+        Liste_Geschichte.append(Writeomat_Horror.Horror_Geschichte_5)
+        Liste_Geschichte.append(Writeomat_Horror.Horror_Geschichte_6)
+        Liste_Geschichte.append(Writeomat_Horror.Horror_Geschichte_7)
+      
+
+        
+        
+        
     elif Genre == "B":
         import Writeomat_Fantasy
         Liste_Geschichte.append(Titel)
@@ -334,9 +335,7 @@ def main():  #Alles, was nicht beim Importieren dieser Datei ausgeführt werden 
         Liste_Geschichte.append(Writeomat_Fantasy.Fantasy_Geschichte_2)
         Liste_Geschichte.append(Writeomat_Fantasy.Fantasy_Geschichte_3)
         Liste_Geschichte.append(Writeomat_Fantasy.Fantasy_Geschichte_4)
-        Liste_Geschichte.append(Writeomat_Fantasy.Fantasy_Geschichte_5)
-        Liste_Geschichte.append(Writeomat_Fantasy.Fantasy_Geschichte_6)
-        Liste_Geschichte.append(Writeomat_Fantasy.Fantasy_Geschichte_7)
+      
     else:
         import Writeomat_SciFi
         Liste_Geschichte.append(Titel)
@@ -353,6 +352,11 @@ def main():  #Alles, was nicht beim Importieren dieser Datei ausgeführt werden 
     if Geschlecht == "W":       
         pass    #Regex zum Verändern des Geschlechts
 
+#    #Alte Ausgabe in der Konsole:
+#    filename = f"{name}'s Geschichte.txt"
+#    with open(filename, "r", encoding="utf-8") as file:
+#        for line in file:
+#            print(line)
 
     clear()
     print(pyfiglet.figlet_format("Write - o - mat"))
@@ -363,9 +367,7 @@ def main():  #Alles, was nicht beim Importieren dieser Datei ausgeführt werden 
         sprachausgabe()  #gibt die Stimme aus
     else:
         print("OK, keine Stimme wird abgespielt.") #wird keine Stimme ausgegeben 
-    
   
-
 
     if sys.platform == "win32": # Windows
         os.startfile(f"{name}'s Geschichte.txt")
@@ -378,9 +380,5 @@ def main():  #Alles, was nicht beim Importieren dieser Datei ausgeführt werden 
 if __name__ == "__main__":
     main()
 
-"""
-Notizen:
-    Wichtige Sachen im Code mit #!!! markieren
-    Reloaded modules:<module_name> ist nur eine Warnung von Spyder, ist nicht wichtig und kann in den Einstellungen ausgestellt werden
-    Im ersten Geschichtsteil bitte kein Random
-"""
+   
+
